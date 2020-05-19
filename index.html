@@ -7,23 +7,97 @@
   </head>
   <body>
     <header>
-      <a href="index.html" class="logo">GllacyShop</a>
-      <nav class="header-nav">
-        <a href="catalog.html" class="header-nav__link">Каталог</a>
-        <a href="#" class="header-nav__link">Доставка и оплата</a>
-        <a href="#" class="header-nav__link">О компании</a>
-      </nav>
-      <button name="search-button">
-        <img src="search-icon" alt="search-button" />
-      </button>
-      <button name="exit-button" type="submit">
-        <img src="exit-icon" alt="exit-icon" />Выход
-      </button>
-      <button name="basket-button" type="submit">
-        <img src="basket-button" alt="basket-button" />
-      </button>
+      <div class="header-row">
+        <a href="#" class="logo">GllacyShop</a>
+        <nav class="header-nav">
+          <div class="nav-wrapper">
+            <a href="catalog.html" class="header-nav__link active">Каталог</a>
+            <a href="#" class="header-nav__link">Доставка и оплата</a>
+            <a href="#" class="header-nav__link">О компании</a>
+          </div>
+        </nav>
+        <input type="search" class="header-nav__search" />
+        <button name="search-button">
+          <img src="search-icon" alt="search-button" />
+        </button>
+        <button name="exit-button" type="submit">
+          <img src="exit-icon" alt="exit-icon" />Выход
+        </button>
+        <button name="basket-button" type="submit">
+          <img src="basket-button" alt="basket-button" />
+        </button>
+      </div>
+      <div class="header-row">
+        <div class="contact-info-wrapper">
+          <p class="contact-info-wrapper__hours">с 10 до 20, ежедневно</p>
+          <p class="contact-info-wrapper__phone">8 812 450-25-25</p>
+        </div>
+      </div>
     </header>
     <main>
+      <!-- MAIN-OFFER -->
+      <div class="main-row-wrapper">
+        <div class="main-offer-wrapper">
+          <h1>Крем-брюле и пломбир с малиновым джемом</h1>
+          <button name="main-button-1" type="submit">
+            Давайте оба!
+          </button>
+        </div>
+      </div>
+      <!-- // MAIN-OFFER -->
+      <!-- PROFIT-OFFER -->
+      <div class="main-row-wrapper">
+        <article class="profit-offer raspberry">
+          <h3>Малинка даром!</h3>
+          <p>
+            При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ
+            банку малинового варенья бесплатно.
+          </p>
+          <button name="main-button-2" type="submit">
+            Хочу варенье!
+          </button>
+        </article>
+        <article class="profit-offer chocolate">
+          <h3>Шоколадки даром!</h3>
+          <p>
+            При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
+            шоколадной присыпки совершенно бесплатно.
+          </p>
+          <button name="main-button-2" type="submit">
+            Хочу шоколадку!
+          </button>
+        </article>
+      </div>
+      <!-- // PROFIT-OFFER -->
+      <!-- HIT-OFFER -->
+      <section class="catalog-content">
+        <div class="catalog-content__ice-cream-wrapper">
+          <div class="ice-cream-wrapper__price-image">310 &#8399;/кг</div>
+          <p class="ice-cream-wrapper__ice-cream-desc">
+            Сливочное с апельсиновым джемом и цитрусовой стружкой
+          </p>
+        </div>
+        <div class="catalog-content__ice-cream-wrapper">
+          <div class="ice-cream-wrapper__price-image">380 &#8399;/кг</div>
+          <p class="ice-cream-wrapper__ice-cream-desc">
+            Сливочно-кофейное с кусочками шоколада
+          </p>
+        </div>
+        <div class="catalog-content__ice-cream-wrapper">
+          <div class="ice-cream-wrapper__price-image">355 &#8399;/кг</div>
+          <p class="ice-cream-wrapper__ice-cream-desc">
+            Сливочно-клубничное с присыпкой из белого шоколада
+          </p>
+        </div>
+        <div class="catalog-content__ice-cream-wrapper">
+          <div class="ice-cream-wrapper__price-image">415 &#8399;/кг</div>
+          <p class="ice-cream-wrapper__ice-cream-desc">
+            Сливочное крем-брюле с карамельной подливкой
+          </p>
+        </div>
+      </section>
+      <!-- // HIT-OFFER -->
+      <!-- ABOUT-SHOP -->
       <section class="shop-desc">
         <h2>
           Магазин Глэйси - это онлайн и офлайн-магазин по продаже мороженого
@@ -64,23 +138,44 @@
           </div>
         </div>
       </section>
-      <article class="new-item">
-        <h4>10 способов сервировки фруктовых щербетов к столу</h4>
-        <p>Новое в нашем блоге</p>
-      </article>
-      <article class="subscription-form">
-        <p>
-          Подпишитесь на сладкую рассылку и будьте всегда в курсе всего самого
-          вкусного, что у нас происходит. Обещаем не спамить и не слать всякой
-          ненужной ерунды. Честно =)
-        </p>
-        <div class="sender-wrapper">
-          <input type="text" placeholder="email@example.com" class="input" />
-          <button name="subscription-form__button" type="submit">
-            Отправить
-          </button>
+      <!-- // ABOUT-SHOP -->
+      <!-- ADDITIONAL-CONTENT -->
+      <div class="main-row-wrapper">
+        <article class="new-item">
+          <h4>10 способов сервировки фруктовых щербетов к столу</h4>
+          <p>Новое в нашем блоге</p>
+        </article>
+        <article class="subscription-form">
+          <p>
+            Подпишитесь на сладкую рассылку и будьте всегда в курсе всего самого
+            вкусного, что у нас происходит. Обещаем не спамить и не слать всякой
+            ненужной ерунды. Честно =)
+          </p>
+          <div class="sender-wrapper">
+            <input type="text" placeholder="email@example.com" class="input" />
+            <button name="main-button-2" type="submit">
+              Отправить
+            </button>
+          </div>
+        </article>
+      </div>
+      <!-- ADDITIONAL-CONTENT -->
+      <!-- MAP -->
+      <div class="main-row-wrapper">
+        <div class="map-holder">
+          <a
+            href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
+          >
+            Санкт‑Петербург</a
+          >
+          <a
+            href="https://yandex.ru/maps/2/saint-petersburg/house/bolshaya_konyushennaya_ulitsa_19_8/Z0kYdQVjSEQPQFtjfXVyeXpgYQ==/?ll=30.324548%2C59.939088&utm_medium=mapframe&utm_source=maps&z=17.16"
+            >Большая Конюшенная улица, 19/8</a
+          >
+          <iframe src="https://yandex.ru/map-widget/v1/-/CCQmfUdiCC"> </iframe>
         </div>
-      </article>
+      </div>
+      <!-- // MAP -->
     </main>
     <footer>
       <div class="social-wrapper">

@@ -8,15 +8,15 @@
   <body>
     <header>
       <div class="header-row">
-        <a href="index.html" class="logo">GllacyShop</a>
+        <a href="#" class="logo">GllacyShop</a>
         <nav class="header-nav">
-          <a href="catalog.html" class="header-nav__link active">Каталог</a>
-          <a href="#" class="header-nav__link">Доставка и оплата</a>
-          <a href="#" class="header-nav__link">О компании</a>
+          <div class="nav-wrapper">
+            <a href="catalog.html" class="header-nav__link active">Каталог</a>
+            <a href="#" class="header-nav__link">Доставка и оплата</a>
+            <a href="#" class="header-nav__link">О компании</a>
+          </div>
         </nav>
-        <button name="search-button">
-          <img src="search-icon" alt="search-button" />
-        </button>
+        <input type="search" class="header-nav__search" />
         <button name="exit-button" type="submit">
           <img src="exit-icon" alt="exit-icon" />Выход
         </button>
@@ -26,11 +26,13 @@
       </div>
       <div class="header-row">
         <div class="page-path">
-          <a href="index.html" class="page-path__link">Главная</a
-          ><span> >> </span>
-          <a href="catalog.html" class="page-path__link">Каталог</a
-          ><span> >> </span>
-          <a href="#" class="page-path__link">Сливочное</a>
+          <div class="page-path__link-wrapper">
+            <a href="index.html" class="page-path__link">Главная</a
+            ><span> >> </span>
+            <a href="catalog.html" class="page-path__link">Каталог</a
+            ><span> >> </span>
+          </div>
+          <h5>Сливочное</h5>
         </div>
         <div class="contact-info-wrapper">
           <p class="contact-info-wrapper__hours">с 10 до 20, ежедневно</p>
@@ -40,6 +42,111 @@
     </header>
     <main>
       <h1>Сливочное мороженое</h1>
+      <section class="filter-content">
+        <div class="filter-content__row">
+          <!-- SORT -->
+          <div class="filter-content__block">
+            <h5>Сортировка</h5>
+            <div class="filter-content__option-wrapper">
+              <select name="sort-option" class="filter-content__sort">
+                <option>По популярности</option>
+                <option>#</option>
+                <option>#</option>
+                <option>#</option>
+                <option>#</option>
+              </select>
+            </div>
+          </div>
+          <!-- // SORT -->
+          <!-- PRICE -->
+          <div class="filter-content__block">
+            <h5>Цена</h5>
+            <div class="filter-content__option-wrapper">
+              <input
+                type="range"
+                min="0"
+                step="10"
+                max="500"
+                value="250"
+                class="filter-content__price"
+              />
+              <input
+                type="range"
+                min="500"
+                step="10"
+                max="1000"
+                value="750"
+                class="filter-content__price"
+              />
+            </div>
+          </div>
+          <!-- // PRICE -->
+          <!-- FAT -->
+          <div class="filter-content__block">
+            <h5>Жирность</h5>
+            <div class="filter-content__option-wrapper">
+              <label class="filter-content__fat-content"
+                ><input type="radio" name="fat-content" class="real-radio" />
+                <div class="custom-radio"></div>
+                0%</label
+              >
+              <label class="filter-content__fat-content"
+                ><input type="radio" name="fat-content" class="real-radio" />
+                <div class="custom-radio"></div>
+                до 10%</label
+              >
+              <label class="filter-content__fat-content"
+                ><input type="radio" name="fat-content" class="real-radio" />
+                <div class="custom-radio"></div>
+                до 30%</label
+              >
+              <label class="filter-content__fat-content"
+                ><input type="radio" name="fat-content" class="real-radio" />
+                <div class="custom-radio"></div>
+                выше 30%</label
+              >
+            </div>
+          </div>
+          <!-- // FAT -->
+        </div>
+        <div class="filter-content__row">
+          <!-- EXTENDER -->
+          <div class="filter-content__block">
+            <h5>Наполнители</h5>
+            <div class="filter-content__option-wrapper">
+              <label class="filter-content__extender"
+                ><input type="checkbox" class="real-checkbox" />
+                <div class="custom-checkbox"></div>
+                шоколадные</label
+              >
+              <label class="filter-content__extender"
+                ><input type="checkbox" class="real-checkbox" />
+                <div class="custom-checkbox"></div>
+                сахарные присыпки</label
+              >
+              <label class="filter-content__extender"
+                ><input type="checkbox" class="real-checkbox" />
+                <div class="custom-checkbox"></div>
+                фрукты</label
+              >
+              <label class="filter-content__extender"
+                ><input type="checkbox" class="real-checkbox" />
+                <div class="custom-checkbox"></div>
+                сиропы</label
+              >
+              <label class="filter-content__extender"
+                ><input type="checkbox" class="real-checkbox" />
+                <div class="custom-checkbox"></div>
+                джемы</label
+              >
+            </div>
+          </div>
+          <!-- // EXTENDER -->
+          <button name="catalog-button-1" type="submit">
+            Применить
+          </button>
+        </div>
+      </section>
       <section class="catalog-content">
         <div class="catalog-content__ice-cream-wrapper">
           <div class="ice-cream-wrapper__price-image">310 &#8399;/кг</div>
@@ -114,6 +221,9 @@
           </p>
         </div>
       </section>
+      <div class="catalog-row-rapper">
+        <!-- place for slider -->
+      </div>
     </main>
     <footer>
       <div class="social-wrapper">
