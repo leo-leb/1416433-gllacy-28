@@ -4,105 +4,124 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GllacyShop: Главная</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header>
       <div class="header-row">
-        <a href="#" class="logo">GllacyShop</a>
+        <a href="#" class="logo"
+          ><img src="./img/logo.svg" width="154px" height="64px" alt="Глейси"
+        /></a>
         <nav class="header-nav">
           <a href="catalog.html" class="header-nav__link active">Каталог</a>
           <a href="#" class="header-nav__link">Доставка и оплата</a>
           <a href="#" class="header-nav__link">О компании</a>
         </nav>
-        <div class="buttons-wrapper">
-          <input type="search" class="header-nav__search" />
-          <button name="exit-button" type="submit">
-            <img src="exit-icon" alt="exit-icon" />Выход
+        <div class="header-buttons">
+          <input type="search" class="header-buttons__search" />
+          <!-- Вставка изображения "лупы" внутрь <input> через свойство "background-image" в CSS -->
+          <button name="button-exit" type="submit">
+            <img
+              src="./img/entrance.svg"
+              width="20px"
+              height="20px"
+              alt="exit-icon"
+            />Вход
           </button>
-          <button name="basket-button" type="submit">
-            <img src="basket-button" alt="basket-button" />
+          <button name="button-basket" type="submit">
+            <img
+              src="./img/basket.svg"
+              width="20px"
+              height="20px"
+              alt="basket-icon"
+            />
           </button>
         </div>
       </div>
       <div class="header-row">
-        <div class="contact-info-wrapper">
-          <p class="contact-info-wrapper__hours">с 10 до 20, ежедневно</p>
-          <p class="contact-info-wrapper__phone">8 812 450-25-25</p>
+        <div class="header-contacts">
+          <p class="header-contacts__hours">с 10 до 20, ежедневно</p>
+          <p class="header-contacts__phone">8 812 450-25-25</p>
         </div>
       </div>
     </header>
-    <main>
+    <main class="index-content">
       <!-- MAIN-OFFER -->
-      <div class="main-row-wrapper">
-        <div class="main-offer-wrapper">
+      <div class="index-row-wrapper">
+        <section class="index-content__general-offer">
           <h1>Крем-брюле и пломбир с малиновым джемом</h1>
-          <button name="main-button-1" type="submit">
+          <button name="index-button-1" type="submit">
             Давайте оба!
           </button>
-        </div>
+        </section>
       </div>
       <!-- // MAIN-OFFER -->
       <!-- PROFIT-OFFER -->
-      <div class="main-row-wrapper">
-        <article class="profit-offer raspberry">
+      <div class="index-row-wrapper">
+        <article class="index-content__profit-offer raspberry">
           <h3>Малинка даром!</h3>
           <p>
             При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ
             банку малинового варенья бесплатно.
           </p>
-          <button name="main-button-2" type="submit">
+          <button name="index-button-2" type="submit">
             Хочу варенье!
           </button>
         </article>
-        <article class="profit-offer chocolate">
+        <article class="index-content__profit-offer chocolate">
           <h3>Шоколадки даром!</h3>
           <p>
             При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
             шоколадной присыпки совершенно бесплатно.
           </p>
-          <button name="main-button-2" type="submit">
+          <button name="index-button-2" type="submit">
             Хочу шоколадку!
           </button>
         </article>
       </div>
       <!-- // PROFIT-OFFER -->
       <!-- HIT-OFFER -->
-      <section class="catalog-content">
-        <div class="catalog-content__ice-cream-wrapper">
-          <div class="ice-cream-wrapper__price-image">310 &#8399;/кг</div>
-          <p class="ice-cream-wrapper__ice-cream-desc">
+      <section class="catalog-content__catalog-products">
+        <div class="catalog-products__product-wrapper">
+          <div class="catalog-products__product-price">310 &#8399;/кг</div>
+          <p class="catalog-products__product-desc">
             Сливочное с апельсиновым джемом и цитрусовой стружкой
           </p>
         </div>
-        <div class="catalog-content__ice-cream-wrapper">
-          <div class="ice-cream-wrapper__price-image">380 &#8399;/кг</div>
-          <p class="ice-cream-wrapper__ice-cream-desc">
+        <div class="catalog-products__product-wrapper">
+          <div class="catalog-products__product-price">380 &#8399;/кг</div>
+          <p class="catalog-products__product-desc">
             Сливочно-кофейное с кусочками шоколада
           </p>
         </div>
-        <div class="catalog-content__ice-cream-wrapper">
-          <div class="ice-cream-wrapper__price-image">355 &#8399;/кг</div>
-          <p class="ice-cream-wrapper__ice-cream-desc">
+        <div class="catalog-products__product-wrapper">
+          <div class="catalog-products__product-price">355 &#8399;/кг</div>
+          <p class="catalog-products__product-desc">
             Сливочно-клубничное с присыпкой из белого шоколада
           </p>
         </div>
-        <div class="catalog-content__ice-cream-wrapper">
-          <div class="ice-cream-wrapper__price-image">415 &#8399;/кг</div>
-          <p class="ice-cream-wrapper__ice-cream-desc">
+        <div class="catalog-products__product-wrapper">
+          <div class="catalog-products__product-price">415 &#8399;/кг</div>
+          <p class="catalog-products__product-desc">
             Сливочное крем-брюле с карамельной подливкой
           </p>
         </div>
       </section>
       <!-- // HIT-OFFER -->
       <!-- ABOUT-SHOP -->
-      <section class="shop-desc">
+      <section class="index-content__shop-desc">
         <h2>
           Магазин Глэйси - это онлайн и офлайн-магазин по продаже мороженого
           собственного производства на развес
         </h2>
         <div class="shop-desc__block-wrapper">
           <div class="shop-desc__block">
-            <img src="#" alt="ice-cream-icon" />
+            <img
+              src="./img/ice-cream.svg"
+              width="49px"
+              height="49px"
+              alt="ice-cream-icon"
+            />
             <p>
               Все наше мороженое изготавливается на собственном производстве, с
               использованием современного оборудования и проверенных временем
@@ -110,7 +129,12 @@
             </p>
           </div>
           <div class="shop-desc__block">
-            <img src="#" alt="cow-icon" />
+            <img
+              src="./img/cow.svg"
+              width="49px"
+              height="49px"
+              alt="cow-icon"
+            />
             <p>
               Закупка ингредиентов производится только у проверенных фермерских
               хозяйств и компаний, с которыми нас связывает долговременное
@@ -118,7 +142,12 @@
             </p>
           </div>
           <div class="shop-desc__block">
-            <img src="#" alt="leaf-icon" />
+            <img
+              src="./img/eco.svg"
+              width="49px"
+              height="49px"
+              alt="leaf-icon"
+            />
             <p>
               Для приготовления мороженого используются настоящие сливки и
               молоко высочайшего качества. Все дополнительные ингредиенты и
@@ -126,7 +155,12 @@
             </p>
           </div>
           <div class="shop-desc__block">
-            <img src="#" alt="thermometer-icon" />
+            <img
+              src="./img/thermometer.svg"
+              width="49px"
+              height="49px"
+              alt="thermometer-icon"
+            />
             <p>
               Доставка нашего мороженного до заказчиков осуществляется в
               специальном термопаке, который не дает мороженому растаять в пути
@@ -137,12 +171,12 @@
       </section>
       <!-- // ABOUT-SHOP -->
       <!-- ADDITIONAL-CONTENT -->
-      <div class="main-row-wrapper">
-        <article class="new-item">
+      <div class="index-row-wrapper">
+        <article class="index-content__new-item">
           <h4>10 способов сервировки фруктовых щербетов к столу</h4>
           <p>Новое в нашем блоге</p>
         </article>
-        <article class="subscription-form">
+        <article class="index-content__subscription-form">
           <p>
             Подпишитесь на сладкую рассылку и будьте всегда в курсе всего самого
             вкусного, что у нас происходит. Обещаем не спамить и не слать всякой
@@ -158,8 +192,8 @@
       </div>
       <!-- ADDITIONAL-CONTENT -->
       <!-- MAP -->
-      <div class="main-row-wrapper">
-        <div class="map-holder">
+      <div class="index-row-wrapper">
+        <div class="index-content__map-holder">
           <a
             href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
           >
@@ -175,23 +209,53 @@
       <!-- // MAP -->
     </main>
     <footer>
-      <div class="social-wrapper">
-        <a href="#" class="social-icon facebook"></a>
-        <a href="#" class="social-icon vkontakte"></a>
-        <a href="#" class="social-icon instagram"></a>
-        <a href="#" class="social-icon twitter"></a>
+      <div class="footer-social">
+        <a href="#" class="footer-social__icon facebook"
+          ><img
+            src="./img/fb.svg"
+            width="32px"
+            height="32px"
+            alt="facebook-icon"
+        /></a>
+        <a href="#" class="footer-social__icon vkontakte"
+          ><img
+            src="./img/vk.svg"
+            width="32px"
+            height="32px"
+            alt="vkontakte-icon"
+        /></a>
+        <a href="#" class="footer-social__icon instagram"
+          ><img
+            src="./img/instagram.svg"
+            width="32px"
+            height="32px"
+            alt="instagram-icon"
+        /></a>
+        <a href="#" class="footer-social__icon twitter"
+          ><img
+            src="./img/twitter.svg"
+            width="32px"
+            height="32px"
+            alt="twitter-icon"
+        /></a>
       </div>
       <nav class="footer-nav">
-        <a href="" class="footer-nav__link">Для поставщиков</a>
-        <a href="" class="footer-nav__link">Наши документы</a>
-        <a href="" class="footer-nav__link">О производстве</a>
-        <a href="" class="footer-nav__link">Экологические стандарты</a>
+        <!-- Вставка изображения "сердца" перед первой ссылкой через псевдо-элемент :before в CSS -->
+        <a href="#" class="footer-nav__link">Для поставщиков</a>
+        <a href="#" class="footer-nav__link">Наши документы</a>
+        <a href="#" class="footer-nav__link">О производстве</a>
+        <a href="#" class="footer-nav__link">Экологические стандарты</a>
       </nav>
-      <div class="founder-corner">
+      <div class="author-corner">
         <a href="https://htmlacademy.ru/study"
-          ><img src="#" alt="founder-name" class="founder-corner__name"
+          ><img
+            src="./img/logo-htmlacademy.svg"
+            width="108px"
+            height="39px"
+            alt="author-name"
+            class="author-corner__name"
         /></a>
-        <div class="founder-corner__creation-desc">
+        <div class="author-corner__creation-desc">
           Сделано в HTML Academy &#169; 2019
         </div>
       </div>

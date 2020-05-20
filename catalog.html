@@ -4,25 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GllacyShop: Каталог</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header>
       <div class="header-row">
-        <a href="index.html" class="logo">GllacyShop</a>
+        <a href="./index.html" class="logo"
+          ><img src="./img/logo.svg" width="154px" height="64px" alt="Глейси"
+        /></a>
         <nav class="header-nav">
-          <div class="nav-wrapper">
-            <a href="#" class="header-nav__link active">Каталог</a>
-            <a href="#" class="header-nav__link">Доставка и оплата</a>
-            <a href="#" class="header-nav__link">О компании</a>
-          </div>
+          <a href="#" class="header-nav__link active">Каталог</a>
+          <a href="#" class="header-nav__link">Доставка и оплата</a>
+          <a href="#" class="header-nav__link">О компании</a>
         </nav>
-        <input type="search" class="header-nav__search" />
-        <button name="exit-button" type="submit">
-          <img src="exit-icon" alt="exit-icon" />Выход
-        </button>
-        <button name="basket-button" type="submit">
-          <img src="basket-button" alt="basket-button" />
-        </button>
+        <div class="header-buttons">
+          <input type="search" class="header-buttons__search" />
+          <!-- Вставка изображения "лупы" внутрь <input> через свойство "background-image" в CSS -->
+          <button name="button-exit" type="submit">
+            <img
+              src="./img/entrance.svg"
+              width="20px"
+              height="20px"
+              alt="exit-icon"
+            />Вход
+          </button>
+          <button name="button-basket" type="submit">
+            <img
+              src="./img/basket-red.svg"
+              width="20px"
+              height="20px"
+              alt="non-empty-basket-icon"
+            />
+          </button>
+        </div>
       </div>
       <div class="header-row">
         <div class="page-path">
@@ -34,21 +48,22 @@
           </div>
           <h5>Сливочное</h5>
         </div>
-        <div class="contact-info-wrapper">
-          <p class="contact-info-wrapper__hours">с 10 до 20, ежедневно</p>
-          <p class="contact-info-wrapper__phone">8 812 450-25-25</p>
+        <img src="./img/select-arrow.svg" alt="" />
+        <div class="header-contacts">
+          <p class="header-contacts__hours">с 10 до 20, ежедневно</p>
+          <p class="header-contacts__phone">8 812 450-25-25</p>
         </div>
       </div>
     </header>
-    <main>
+    <main class="catalog-content">
       <h1>Сливочное мороженое</h1>
-      <section class="filter-content">
-        <div class="filter-content__row">
+      <section class="catalog-content__filter">
+        <div class="filter__row">
           <!-- SORT -->
-          <div class="filter-content__block">
+          <div class="filter__block">
             <h5>Сортировка</h5>
-            <div class="filter-content__option-wrapper">
-              <select name="sort-option" class="filter-content__sort">
+            <div class="filter__option-wrapper">
+              <select name="sort-option" class="filter__sort">
                 <option>По популярности</option>
                 <option>#</option>
                 <option>#</option>
@@ -59,16 +74,16 @@
           </div>
           <!-- // SORT -->
           <!-- PRICE -->
-          <div class="filter-content__block">
+          <div class="filter__block">
             <h5>Цена</h5>
-            <div class="filter-content__option-wrapper">
+            <div class="filter__option-wrapper">
               <input
                 type="range"
                 min="0"
                 step="10"
                 max="500"
                 value="250"
-                class="filter-content__price"
+                class="filter__price"
               />
               <input
                 type="range"
@@ -76,31 +91,31 @@
                 step="10"
                 max="1000"
                 value="750"
-                class="filter-content__price"
+                class="filter__price"
               />
             </div>
           </div>
           <!-- // PRICE -->
           <!-- FAT -->
-          <div class="filter-content__block">
+          <div class="filter__block">
             <h5>Жирность</h5>
-            <div class="filter-content__option-wrapper">
-              <label class="filter-content__fat-content"
+            <div class="filter__option-wrapper">
+              <label class="filter__fat-content"
                 ><input type="radio" name="fat-content" class="real-radio" />
                 <div class="custom-radio"></div>
                 0%</label
               >
-              <label class="filter-content__fat-content"
+              <label class="filter__fat-content"
                 ><input type="radio" name="fat-content" class="real-radio" />
                 <div class="custom-radio"></div>
                 до 10%</label
               >
-              <label class="filter-content__fat-content"
+              <label class="filter__fat-content"
                 ><input type="radio" name="fat-content" class="real-radio" />
                 <div class="custom-radio"></div>
                 до 30%</label
               >
-              <label class="filter-content__fat-content"
+              <label class="filter__fat-content"
                 ><input type="radio" name="fat-content" class="real-radio" />
                 <div class="custom-radio"></div>
                 выше 30%</label
@@ -109,32 +124,32 @@
           </div>
           <!-- // FAT -->
         </div>
-        <div class="filter-content__row">
+        <div class="filter__row">
           <!-- EXTENDER -->
-          <div class="filter-content__block">
+          <div class="filter__block">
             <h5>Наполнители</h5>
-            <div class="filter-content__option-wrapper">
-              <label class="filter-content__extender"
+            <div class="filter__option-wrapper">
+              <label class="filter__extender"
                 ><input type="checkbox" class="real-checkbox" />
                 <div class="custom-checkbox"></div>
                 шоколадные</label
               >
-              <label class="filter-content__extender"
+              <label class="filter__extender"
                 ><input type="checkbox" class="real-checkbox" />
                 <div class="custom-checkbox"></div>
                 сахарные присыпки</label
               >
-              <label class="filter-content__extender"
+              <label class="filter__extender"
                 ><input type="checkbox" class="real-checkbox" />
                 <div class="custom-checkbox"></div>
                 фрукты</label
               >
-              <label class="filter-content__extender"
+              <label class="filter__extender"
                 ><input type="checkbox" class="real-checkbox" />
                 <div class="custom-checkbox"></div>
                 сиропы</label
               >
-              <label class="filter-content__extender"
+              <label class="filter__extender"
                 ><input type="checkbox" class="real-checkbox" />
                 <div class="custom-checkbox"></div>
                 джемы</label
@@ -147,102 +162,206 @@
           </button>
         </div>
       </section>
-      <section class="catalog-content">
-        <div class="catalog-content__ice-cream-wrapper">
-          <div class="ice-cream-wrapper__price-image">310 &#8399;/кг</div>
-          <p class="ice-cream-wrapper__ice-cream-desc">
+      <section class="catalog-content__catalog-products">
+        <!-- Вероятно, изображения будут вставлены в будущем через псевдо-элемент :after в CSS
+        Пока просто повставлял "в лоб" в код HTML -->
+        <div class="catalog-products__product-wrapper">
+          <div class="catalog-products__product-price">310 &#8399;/кг</div>
+          <img
+            src="./img/products/1-icon.png"
+            width="267px"
+            height="267px"
+            alt="product-1"
+          />
+          <p class="catalog-products__product-desc">
             Сливочное с апельсиновым джемом и цитрусовой стружкой
           </p>
         </div>
-        <div class="catalog-content__ice-cream-wrapper">
-          <div class="ice-cream-wrapper__price-image">380 &#8399;/кг</div>
-          <p class="ice-cream-wrapper__ice-cream-desc">
+        <div class="catalog-products__product-wrapper">
+          <div class="ice-cream-wrapper__product-price">380 &#8399;/кг</div>
+          <img
+            src="./img/products/2-icon.png"
+            width="267px"
+            height="267px"
+            alt="product-2"
+          />
+          <p class="ice-cream-wrapper__product-desc">
             Сливочно-кофейное с кусочками шоколада
           </p>
         </div>
-        <div class="catalog-content__ice-cream-wrapper">
-          <div class="ice-cream-wrapper__price-image">355 &#8399;/кг</div>
-          <p class="ice-cream-wrapper__ice-cream-desc">
+        <div class="catalog-products__product-wrapper">
+          <div class="ice-cream-wrapper__product-price">355 &#8399;/кг</div>
+          <img
+            src="./img/products/3-icon.png"
+            width="267px"
+            height="267px"
+            alt="product-3"
+          />
+          <p class="ice-cream-wrapper__product-desc">
             Сливочно-клубничное с присыпкой из белого шоколада
           </p>
         </div>
-        <div class="catalog-content__ice-cream-wrapper">
-          <div class="ice-cream-wrapper__price-image">415 &#8399;/кг</div>
-          <p class="ice-cream-wrapper__ice-cream-desc">
+        <div class="catalog-products__product-wrapper">
+          <div class="ice-cream-wrapper__product-price">415 &#8399;/кг</div>
+          <img
+            src="./img/products/4-icon.png"
+            width="267px"
+            height="267px"
+            alt="product-4"
+          />
+          <p class="ice-cream-wrapper__product-desc">
             Сливочное крем-брюле с карамельной подливкой
           </p>
         </div>
-        <div class="catalog-content__ice-cream-wrapper">
-          <div class="ice-cream-wrapper__price-image">325 &#8399;/кг</div>
-          <p class="ice-cream-wrapper__ice-cream-desc">
+        <div class="catalog-products__product-wrapper">
+          <div class="ice-cream-wrapper__product-price">325 &#8399;/кг</div>
+          <img
+            src="./img/products/5-icon.png"
+            width="267px"
+            height="267px"
+            alt="product-5"
+          />
+          <p class="ice-cream-wrapper__product-desc">
             Сливочное с брусничным джемом
           </p>
         </div>
-        <div class="catalog-content__ice-cream-wrapper">
-          <div class="ice-cream-wrapper__price-image">410 &#8399;/кг</div>
-          <p class="ice-cream-wrapper__ice-cream-desc">
+        <div class="catalog-products__product-wrapper">
+          <div class="ice-cream-wrapper__product-price">410 &#8399;/кг</div>
+          <img
+            src="./img/products/6-icon.png"
+            width="267px"
+            height="267px"
+            alt="product-6"
+          />
+          <p class="ice-cream-wrapper__product-desc">
             Сливочно-черничное с цельными ягодами черники
           </p>
         </div>
-        <div class="catalog-content__ice-cream-wrapper">
-          <div class="ice-cream-wrapper__price-image">315 &#8399;/кг</div>
-          <p class="ice-cream-wrapper__ice-cream-desc">
+        <div class="catalog-products__product-wrapper">
+          <div class="ice-cream-wrapper__product-price">315 &#8399;/кг</div>
+          <img
+            src="./img/products/7-icon.png"
+            width="267px"
+            height="267px"
+            alt="product-7"
+          />
+          <p class="ice-cream-wrapper__product-desc">
             Сливочное-лимонное с карамельной присыпкой
           </p>
         </div>
-        <div class="catalog-content__ice-cream-wrapper">
-          <div class="ice-cream-wrapper__price-image">320 &#8399;/кг</div>
-          <p class="ice-cream-wrapper__ice-cream-desc">
+        <div class="catalog-products__product-wrapper">
+          <div class="ice-cream-wrapper__product-price">320 &#8399;/кг</div>
+          <img
+            src="./img/products/8-icon.png"
+            width="267px"
+            height="267px"
+            alt="product-8"
+          />
+          <p class="ice-cream-wrapper__product-desc">
             Сливочное с шоколадной стружкой
           </p>
         </div>
-        <div class="catalog-content__ice-cream-wrapper">
-          <div class="ice-cream-wrapper__price-image">440 &#8399;/кг</div>
-          <p class="ice-cream-wrapper__ice-cream-desc">
+        <div class="catalog-products__product-wrapper">
+          <div class="ice-cream-wrapper__product-price">440 &#8399;/кг</div>
+          <img
+            src="./img/products/9-icon.png"
+            width="267px"
+            height="267px"
+            alt="product-9"
+          />
+          <p class="ice-cream-wrapper__product-desc">
             Сливочно-ванильное с кусочками шоколада
           </p>
         </div>
-        <div class="catalog-content__ice-cream-wrapper">
-          <div class="ice-cream-wrapper__price-image">435 &#8399;/кг</div>
-          <p class="ice-cream-wrapper__ice-cream-desc">
+        <div class="catalog-products__product-wrapper">
+          <div class="ice-cream-wrapper__product-price">435 &#8399;/кг</div>
+          <img
+            src="./img/products/10-icon.png"
+            width="267px"
+            height="267px"
+            alt="product-10"
+          />
+          <p class="ice-cream-wrapper__product-desc">
             Сливочное с ментоловым сиропом
           </p>
         </div>
-        <div class="catalog-content__ice-cream-wrapper">
-          <div class="ice-cream-wrapper__price-image">355 &#8399;/кг</div>
-          <p class="ice-cream-wrapper__ice-cream-desc">
+        <div class="catalog-products__product-wrapper">
+          <div class="ice-cream-wrapper__product-price">355 &#8399;/кг</div>
+          <img
+            src="./img/products/11-icon.png"
+            width="267px"
+            height="267px"
+            alt="product-11"
+          />
+          <p class="ice-cream-wrapper__product-desc">
             Сливочное с кусочками черного шоколада
           </p>
         </div>
-        <div class="catalog-content__ice-cream-wrapper">
-          <div class="ice-cream-wrapper__price-image">420 &#8399;/кг</div>
-          <p class="ice-cream-wrapper__ice-cream-desc">
+        <div class="catalog-products__product-wrapper">
+          <div class="ice-cream-wrapper__product-price">420 &#8399;/кг</div>
+          <img
+            src="./img/products/12-icon.png"
+            width="267px"
+            height="267px"
+            alt="product-12"
+          />
+          <p class="ice-cream-wrapper__product-desc">
             Сливочное с мятным сиропом
           </p>
         </div>
       </section>
-      <div class="catalog-row-rapper">
-        <!-- place for slider -->
+      <div class="catalog-row-wrapper">
+        <!-- Место для слайдера (допустим через owlcarousel) -->
       </div>
     </main>
     <footer>
-      <div class="social-wrapper">
-        <a href="#" class="social-icon facebook"></a>
-        <a href="#" class="social-icon vkontakte"></a>
-        <a href="#" class="social-icon instagram"></a>
-        <a href="#" class="social-icon twitter"></a>
+      <div class="footer-social">
+        <a href="#" class="footer-social__icon facebook"
+          ><img
+            src="./img/fb.svg"
+            width="32px"
+            height="32px"
+            alt="facebook-icon"
+        /></a>
+        <a href="#" class="footer-social__icon vkontakte"
+          ><img
+            src="./img/vk.svg"
+            width="32px"
+            height="32px"
+            alt="vkontakte-icon"
+        /></a>
+        <a href="#" class="footer-social__icon instagram"
+          ><img
+            src="./img/instagram.svg"
+            width="32px"
+            height="32px"
+            alt="instagram-icon"
+        /></a>
+        <a href="#" class="footer-social__icon twitter"
+          ><img
+            src="./img/twitter.svg"
+            width="32px"
+            height="32px"
+            alt="twitter-icon"
+        /></a>
       </div>
       <nav class="footer-nav">
-        <a href="" class="footer-nav__link">Для поставщиков</a>
-        <a href="" class="footer-nav__link">Наши документы</a>
-        <a href="" class="footer-nav__link">О производстве</a>
-        <a href="" class="footer-nav__link">Экологические стандарты</a>
+        <!-- Вставка изображения "сердца" перед первой ссылкой через псевдо-элемент :before в CSS -->
+        <a href="#" class="footer-nav__link">Для поставщиков</a>
+        <a href="#" class="footer-nav__link">Наши документы</a>
+        <a href="#" class="footer-nav__link">О производстве</a>
+        <a href="#" class="footer-nav__link">Экологические стандарты</a>
       </nav>
-      <div class="founder-corner">
+      <div class="author-corner">
         <a href="https://htmlacademy.ru/study"
-          ><img src="#" alt="founder-name" class="founder-corner__name"
+          ><img
+            src="./img/logo-htmlacademy.svg"
+            width="108px"
+            height="39px"
+            alt="author-name"
+            class="author-corner__name"
         /></a>
-        <div class="founder-corner__creation-desc">
+        <div class="author-corner__creation-desc">
           Сделано в HTML Academy &#169; 2019
         </div>
       </div>
