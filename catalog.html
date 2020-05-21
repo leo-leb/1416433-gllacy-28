@@ -10,7 +10,11 @@
     <header>
       <div class="header-row">
         <a href="./index.html" class="logo"
-          ><img src="./img/logo.svg" width="154px" height="64px" alt="Глейси"
+          ><img
+            src="./img/icons/logo.svg"
+            width="154px"
+            height="64px"
+            alt="Глейси"
         /></a>
         <nav class="header-nav">
           <a href="#" class="header-nav__link active">Каталог</a>
@@ -19,10 +23,10 @@
         </nav>
         <div class="header-buttons">
           <input type="search" class="header-buttons__search" />
-          <!-- Вставка изображения "лупы" внутрь <input> через свойство "background-image" в CSS -->
+          <!-- Вставка изображения "лупы" внутрь <input> через псевдо-элемент в CSS -->
           <button name="button-exit" type="submit">
             <img
-              src="./img/entrance.svg"
+              src="./img/icons/entrance.svg"
               width="20px"
               height="20px"
               alt="exit-icon"
@@ -30,11 +34,11 @@
           </button>
           <button name="button-basket" type="submit">
             <img
-              src="./img/basket-red.svg"
+              src="./img/icons/basket-red.svg"
               width="20px"
               height="20px"
               alt="non-empty-basket-icon"
-            />
+            />2 товара
           </button>
         </div>
       </div>
@@ -48,7 +52,6 @@
           </div>
           <h5>Сливочное</h5>
         </div>
-        <img src="./img/select-arrow.svg" alt="" />
         <div class="header-contacts">
           <p class="header-contacts__hours">с 10 до 20, ежедневно</p>
           <p class="header-contacts__phone">8 812 450-25-25</p>
@@ -64,16 +67,14 @@
             <h5>Сортировка</h5>
             <div class="filter__option-wrapper">
               <select name="sort-option" class="filter__sort">
-                <option>По популярности</option>
-                <option>#</option>
-                <option>#</option>
-                <option>#</option>
-                <option>#</option>
+                <option>по популярности</option>
+                <option>сначала недорогие</option>
+                <option>сачала дорогие</option>
+                <option>по жирности</option>
               </select>
             </div>
           </div>
           <!-- // SORT -->
-          <!-- PRICE -->
           <div class="filter__block">
             <h5>Цена</h5>
             <div class="filter__option-wrapper">
@@ -166,7 +167,15 @@
         <!-- Вероятно, изображения будут вставлены в будущем через псевдо-элемент :after в CSS
         Пока просто повставлял "в лоб" в код HTML -->
         <div class="catalog-products__product-wrapper">
-          <div class="catalog-products__product-price">310 &#8399;/кг</div>
+          <div class="catalog-products__product-price">
+            310
+            <img
+              src="./img/icons/ruble.svg"
+              width="30px"
+              height="35px"
+              alt="ruble"
+            />/кг
+          </div>
           <img
             src="./img/products/1-icon.png"
             width="267px"
@@ -178,7 +187,15 @@
           </p>
         </div>
         <div class="catalog-products__product-wrapper">
-          <div class="ice-cream-wrapper__product-price">380 &#8399;/кг</div>
+          <div class="ice-cream-wrapper__product-price">
+            380
+            <img
+              src="./img/icons/ruble.svg"
+              width="30px"
+              height="35px"
+              alt="ruble"
+            />/кг
+          </div>
           <img
             src="./img/products/2-icon.png"
             width="267px"
@@ -190,7 +207,15 @@
           </p>
         </div>
         <div class="catalog-products__product-wrapper">
-          <div class="ice-cream-wrapper__product-price">355 &#8399;/кг</div>
+          <div class="ice-cream-wrapper__product-price">
+            355
+            <img
+              src="./img/icons/ruble.svg"
+              width="30px"
+              height="35px"
+              alt="ruble"
+            />/кг
+          </div>
           <img
             src="./img/products/3-icon.png"
             width="267px"
@@ -202,7 +227,15 @@
           </p>
         </div>
         <div class="catalog-products__product-wrapper">
-          <div class="ice-cream-wrapper__product-price">415 &#8399;/кг</div>
+          <div class="ice-cream-wrapper__product-price">
+            415
+            <img
+              src="./img/icons/ruble.svg"
+              width="30px"
+              height="35px"
+              alt="ruble"
+            />/кг
+          </div>
           <img
             src="./img/products/4-icon.png"
             width="267px"
@@ -214,7 +247,15 @@
           </p>
         </div>
         <div class="catalog-products__product-wrapper">
-          <div class="ice-cream-wrapper__product-price">325 &#8399;/кг</div>
+          <div class="ice-cream-wrapper__product-price">
+            325
+            <img
+              src="./img/icons/ruble.svg"
+              width="30px"
+              height="35px"
+              alt="ruble"
+            />/кг
+          </div>
           <img
             src="./img/products/5-icon.png"
             width="267px"
@@ -226,7 +267,15 @@
           </p>
         </div>
         <div class="catalog-products__product-wrapper">
-          <div class="ice-cream-wrapper__product-price">410 &#8399;/кг</div>
+          <div class="ice-cream-wrapper__product-price">
+            410
+            <img
+              src="./img/icons/ruble.svg"
+              width="30px"
+              height="35px"
+              alt="ruble"
+            />/кг
+          </div>
           <img
             src="./img/products/6-icon.png"
             width="267px"
@@ -238,7 +287,15 @@
           </p>
         </div>
         <div class="catalog-products__product-wrapper">
-          <div class="ice-cream-wrapper__product-price">315 &#8399;/кг</div>
+          <div class="ice-cream-wrapper__product-price">
+            315
+            <img
+              src="./img/icons/ruble.svg"
+              width="30px"
+              height="35px"
+              alt="ruble"
+            />/кг
+          </div>
           <img
             src="./img/products/7-icon.png"
             width="267px"
@@ -250,7 +307,15 @@
           </p>
         </div>
         <div class="catalog-products__product-wrapper">
-          <div class="ice-cream-wrapper__product-price">320 &#8399;/кг</div>
+          <div class="ice-cream-wrapper__product-price">
+            320
+            <img
+              src="./img/icons/ruble.svg"
+              width="30px"
+              height="35px"
+              alt="ruble"
+            />/кг
+          </div>
           <img
             src="./img/products/8-icon.png"
             width="267px"
@@ -262,7 +327,15 @@
           </p>
         </div>
         <div class="catalog-products__product-wrapper">
-          <div class="ice-cream-wrapper__product-price">440 &#8399;/кг</div>
+          <div class="ice-cream-wrapper__product-price">
+            440
+            <img
+              src="./img/icons/ruble.svg"
+              width="30px"
+              height="35px"
+              alt="ruble"
+            />/кг
+          </div>
           <img
             src="./img/products/9-icon.png"
             width="267px"
@@ -274,7 +347,15 @@
           </p>
         </div>
         <div class="catalog-products__product-wrapper">
-          <div class="ice-cream-wrapper__product-price">435 &#8399;/кг</div>
+          <div class="ice-cream-wrapper__product-price">
+            435
+            <img
+              src="./img/icons/ruble.svg"
+              width="30px"
+              height="35px"
+              alt="ruble"
+            />/кг
+          </div>
           <img
             src="./img/products/10-icon.png"
             width="267px"
@@ -286,7 +367,15 @@
           </p>
         </div>
         <div class="catalog-products__product-wrapper">
-          <div class="ice-cream-wrapper__product-price">355 &#8399;/кг</div>
+          <div class="ice-cream-wrapper__product-price">
+            355
+            <img
+              src="./img/icons/ruble.svg"
+              width="30px"
+              height="35px"
+              alt="ruble"
+            />/кг
+          </div>
           <img
             src="./img/products/11-icon.png"
             width="267px"
@@ -298,7 +387,15 @@
           </p>
         </div>
         <div class="catalog-products__product-wrapper">
-          <div class="ice-cream-wrapper__product-price">420 &#8399;/кг</div>
+          <div class="ice-cream-wrapper__product-price">
+            420
+            <img
+              src="./img/icons/ruble.svg"
+              width="30px"
+              height="35px"
+              alt="ruble"
+            />/кг
+          </div>
           <img
             src="./img/products/12-icon.png"
             width="267px"
@@ -318,28 +415,28 @@
       <div class="footer-social">
         <a href="#" class="footer-social__icon facebook"
           ><img
-            src="./img/fb.svg"
+            src="./img/icons/fb.svg"
             width="32px"
             height="32px"
             alt="facebook-icon"
         /></a>
         <a href="#" class="footer-social__icon vkontakte"
           ><img
-            src="./img/vk.svg"
+            src="./img/icons/vk.svg"
             width="32px"
             height="32px"
             alt="vkontakte-icon"
         /></a>
         <a href="#" class="footer-social__icon instagram"
           ><img
-            src="./img/instagram.svg"
+            src="./img/icons/instagram.svg"
             width="32px"
             height="32px"
             alt="instagram-icon"
         /></a>
         <a href="#" class="footer-social__icon twitter"
           ><img
-            src="./img/twitter.svg"
+            src="./img/icons/twitter.svg"
             width="32px"
             height="32px"
             alt="twitter-icon"
@@ -355,7 +452,7 @@
       <div class="author-corner">
         <a href="https://htmlacademy.ru/study"
           ><img
-            src="./img/logo-htmlacademy.svg"
+            src="./img/icons/logo-htmlacademy.svg"
             width="108px"
             height="39px"
             alt="author-name"

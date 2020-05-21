@@ -10,7 +10,11 @@
     <header>
       <div class="header-row">
         <a href="#" class="logo"
-          ><img src="./img/logo.svg" width="154px" height="64px" alt="Глейси"
+          ><img
+            src="./img/icons/logo.svg"
+            width="154px"
+            height="64px"
+            alt="Глейси"
         /></a>
         <nav class="header-nav">
           <a href="catalog.html" class="header-nav__link active">Каталог</a>
@@ -19,10 +23,10 @@
         </nav>
         <div class="header-buttons">
           <input type="search" class="header-buttons__search" />
-          <!-- Вставка изображения "лупы" внутрь <input> через свойство "background-image" в CSS -->
+          <!-- Вставка изображения "лупы" внутрь <input> через псевдо-элемент в CSS -->
           <button name="button-exit" type="submit">
             <img
-              src="./img/entrance.svg"
+              src="./img/icons/entrance.svg"
               width="20px"
               height="20px"
               alt="exit-icon"
@@ -30,11 +34,11 @@
           </button>
           <button name="button-basket" type="submit">
             <img
-              src="./img/basket.svg"
+              src="./img/icons/basket.svg"
               width="20px"
               height="20px"
               alt="basket-icon"
-            />
+            />Пусто
           </button>
         </div>
       </div>
@@ -49,6 +53,22 @@
       <!-- MAIN-OFFER -->
       <div class="index-row-wrapper">
         <section class="index-content__general-offer">
+          <div class="index-content__big-ice-cream-wrapper">
+            <img
+              src="./img/big-ice-cream/big-ice-cream-3.1.png"
+              width="372px"
+              height="584px"
+              alt="big-ice-cream"
+              class="index-content__big-ice-cream-left"
+            />
+            <img
+              src="./img/big-ice-cream/big-ice-cream-3.2.png"
+              width="333px"
+              height="519px"
+              alt="big-ice-cream"
+              class="index-content__big-ice-cream-right"
+            />
+          </div>
           <h1>Крем-брюле и пломбир с малиновым джемом</h1>
           <button name="index-content__button" type="submit">
             Давайте оба!
@@ -83,25 +103,81 @@
       <!-- HIT-OFFER -->
       <section class="catalog-content__catalog-products">
         <div class="catalog-products__product-wrapper">
-          <div class="catalog-products__product-price">310 &#8399;/кг</div>
+          <div class="catalog-products__product-price">
+            310
+            <img
+              src="./img/icons/ruble.svg"
+              width="30px"
+              height="35px"
+              alt="ruble"
+            />/кг
+          </div>
+          <img
+            src="./img/products/1-icon.png"
+            width="267px"
+            height="267px"
+            alt="product-1"
+          />
           <p class="catalog-products__product-desc">
             Сливочное с апельсиновым джемом и цитрусовой стружкой
           </p>
         </div>
         <div class="catalog-products__product-wrapper">
-          <div class="catalog-products__product-price">380 &#8399;/кг</div>
+          <div class="catalog-products__product-price">
+            380
+            <img
+              src="./img/icons/ruble.svg"
+              width="30px"
+              height="35px"
+              alt="ruble"
+            />/кг
+          </div>
+          <img
+            src="./img/products/2-icon.png"
+            width="267px"
+            height="267px"
+            alt="product-2"
+          />
           <p class="catalog-products__product-desc">
             Сливочно-кофейное с кусочками шоколада
           </p>
         </div>
         <div class="catalog-products__product-wrapper">
-          <div class="catalog-products__product-price">355 &#8399;/кг</div>
+          <div class="catalog-products__product-price">
+            355
+            <img
+              src="./img/icons/ruble.svg"
+              width="30px"
+              height="35px"
+              alt="ruble"
+            />/кг
+          </div>
+          <img
+            src="./img/products/3-icon.png"
+            width="267px"
+            height="267px"
+            alt="product-3"
+          />
           <p class="catalog-products__product-desc">
             Сливочно-клубничное с присыпкой из белого шоколада
           </p>
         </div>
         <div class="catalog-products__product-wrapper">
-          <div class="catalog-products__product-price">415 &#8399;/кг</div>
+          <div class="catalog-products__product-price">
+            415
+            <img
+              src="./img/icons/ruble.svg"
+              width="30px"
+              height="35px"
+              alt="ruble"
+            />/кг
+          </div>
+          <img
+            src="./img/products/4-icon.png"
+            width="267px"
+            height="267px"
+            alt="product-4"
+          />
           <p class="catalog-products__product-desc">
             Сливочное крем-брюле с карамельной подливкой
           </p>
@@ -117,7 +193,7 @@
         <div class="shop-desc__block-wrapper">
           <div class="shop-desc__block">
             <img
-              src="./img/ice-cream.svg"
+              src="./img/icons/ice-cream.svg"
               width="49px"
               height="49px"
               alt="ice-cream-icon"
@@ -130,7 +206,7 @@
           </div>
           <div class="shop-desc__block">
             <img
-              src="./img/cow.svg"
+              src="./img/icons/cow.svg"
               width="49px"
               height="49px"
               alt="cow-icon"
@@ -143,7 +219,7 @@
           </div>
           <div class="shop-desc__block">
             <img
-              src="./img/eco.svg"
+              src="./img/icons/eco.svg"
               width="49px"
               height="49px"
               alt="leaf-icon"
@@ -156,7 +232,7 @@
           </div>
           <div class="shop-desc__block">
             <img
-              src="./img/thermometer.svg"
+              src="./img/icons/thermometer.svg"
               width="49px"
               height="49px"
               alt="thermometer-icon"
@@ -193,6 +269,13 @@
       <!-- ADDITIONAL-CONTENT -->
       <!-- MAP -->
       <div class="index-row-wrapper">
+        <img
+          src="./img/icons/pin.svg"
+          width="80px"
+          height="140px"
+          alt="location-pin"
+        />
+        <!-- Картинку локации ожно через псевдо-элемент относительно "index-content__map-holder" в CSS -->
         <div class="index-content__map-holder">
           <a
             href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps"
@@ -212,28 +295,28 @@
       <div class="footer-social">
         <a href="#" class="footer-social__icon facebook"
           ><img
-            src="./img/fb.svg"
+            src="./img/icons/fb.svg"
             width="32px"
             height="32px"
             alt="facebook-icon"
         /></a>
         <a href="#" class="footer-social__icon vkontakte"
           ><img
-            src="./img/vk.svg"
+            src="./img/icons/vk.svg"
             width="32px"
             height="32px"
             alt="vkontakte-icon"
         /></a>
         <a href="#" class="footer-social__icon instagram"
           ><img
-            src="./img/instagram.svg"
+            src="./img/icons/instagram.svg"
             width="32px"
             height="32px"
             alt="instagram-icon"
         /></a>
         <a href="#" class="footer-social__icon twitter"
           ><img
-            src="./img/twitter.svg"
+            src="./img/icons/twitter.svg"
             width="32px"
             height="32px"
             alt="twitter-icon"
@@ -241,7 +324,12 @@
       </div>
       <nav class="footer-nav">
         <!-- Вставка изображения "сердца" перед первой ссылкой через псевдо-элемент :before в CSS -->
-        <a href="#" class="footer-nav__link">Для поставщиков</a>
+        <img
+          src="./img/icons/heart.svg"
+          width="15px"
+          height="13px"
+          alt="like"
+        /><a href="#" class="footer-nav__link">Для поставщиков</a>
         <a href="#" class="footer-nav__link">Наши документы</a>
         <a href="#" class="footer-nav__link">О производстве</a>
         <a href="#" class="footer-nav__link">Экологические стандарты</a>
@@ -249,7 +337,7 @@
       <div class="author-corner">
         <a href="https://htmlacademy.ru/study"
           ><img
-            src="./img/logo-htmlacademy.svg"
+            src="./img/icons/logo-htmlacademy.svg"
             width="108px"
             height="39px"
             alt="author-name"
