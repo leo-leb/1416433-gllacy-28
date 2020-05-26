@@ -17,29 +17,131 @@
             alt="Глейси"
         /></a>
         <nav class="header-nav">
-          <a href="#" class="header-nav__link active">Каталог</a>
+          <div class="header-nav__catalog-wrapper">
+            <button type="button" class="button-alt button-alt-catalog">
+              Каталог
+            </button>
+            <select name="header-nav__catalog visually-hidden">
+              <option
+                value="new-items"
+                class="header-nav__catalog-item catalog-item-new"
+                >Новинки</option
+              >
+              <option value="creamy" class="header-nav__catalog-item"
+                >Сливочное</option
+              >
+              <option value="sherbets" class="header-nav__catalog-item" selected
+                >Щербеты</option
+              >
+              <option value="fruit-ice" class="header-nav__catalog-item"
+                >Фруктовый лед</option
+              >
+              <option value="melorin" class="header-nav__catalog-item"
+                >Мелорин</option
+              ></select
+            >
+          </div>
           <a href="#" class="header-nav__link">Доставка и оплата</a>
           <a href="#" class="header-nav__link">О компании</a>
         </nav>
         <div class="header-buttons">
-          <input type="search" class="header-buttons__search" />
-          <!-- Вставка изображения "лупы" внутрь <input> через псевдо-элемент в CSS -->
-          <button name="button-exit" type="submit">
-            <img
-              src="./img/icons/entrance.svg"
-              width="20px"
-              height="20px"
-              alt="exit-icon"
-            />Вход
-          </button>
-          <button name="button-basket" type="submit">
-            <img
-              src="./img/icons/basket-red.svg"
-              width="20px"
-              height="20px"
-              alt="non-empty-basket-icon"
-            />2 товара
-          </button>
+          <div class="header-nav__search-wrapper">
+            <button type="button" class="button-alt button-alt-search">
+              <img
+                src="./img/icons/loupe.svg"
+                width="16px"
+                height="16px"
+                alt="search-icon"
+              />
+            </button>
+            <input
+              type="search"
+              class="header-buttons__search visually-hidden"
+              placeholder="Что ищем?"
+            />
+          </div>
+          <div class="header-nav__entrance-wrapper">
+            <button type="button" class="button-alt button-alt-entrance">
+              <img
+                src="./img/icons/entrance.svg"
+                width="20px"
+                height="20px"
+                alt="exit-icon"
+              />Вход
+            </button>
+            <div class="header-nav__entrance-form visually-hidden">
+              <input type="email" placeholder="Электронная почта" />
+              <input type="password" placeholder="Пароль" />
+              <div class="entrance-form__row">
+                <button type="submit" class="button button-entrance">
+                  Войти
+                </button>
+                <div class="entrance-form__links-wrapper">
+                  <a href="#" class="entrance-form__link">Забыли пароль?</a>
+                  <a href="#" class="entrance-form__link">Новая регистрация</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-nav__basket-wrapper">
+            <button type="button" class="button-alt button-alt-basket">
+              <img
+                src="./img/icons/basket-red.svg"
+                width="20px"
+                height="20px"
+                alt="non-empty-basket-icon"
+              />2 товара
+            </button>
+            <div class="header-nav__basket-form visually-hidden">
+              <table class="basket-form__table">
+                <tr>
+                  <td>
+                    <img
+                      src="./img/icons/cross-small.svg"
+                      width="11px"
+                      height="11px"
+                      alt="delete-icon"
+                    />
+                  </td>
+                  <td>
+                    <img
+                      src="./img/products/1-icon.png"
+                      width="33px"
+                      height="33px"
+                      alt="product-1"
+                    />
+                  </td>
+                  <td>Пломбир с апельсиновым джемом</td>
+                  <td>1,5кг х<span>200 руб.</span></td>
+                  <td>300 руб.</td>
+                </tr>
+                <tr>
+                  <td>
+                    <img
+                      src="./img/icons/cross-small.svg"
+                      width="11px"
+                      height="11px"
+                      alt="delete-icon"
+                    />
+                  </td>
+                  <td>
+                    <img
+                      src="./img/products/3-icon.png"
+                      width="33px"
+                      height="33px"
+                      alt="product-3"
+                    />
+                  </td>
+                  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                  <td>1,5кг х<span>300 руб.</span></td>
+                  <td>450 руб.</td>
+                </tr>
+              </table>
+              <button type="submit" class="button button-basket-confirm">
+                Оформить заказ
+              </button>
+            </div>
+          </div>
         </div>
       </div>
       <div class="header-row">
@@ -164,8 +266,6 @@
         </div>
       </section>
       <section class="catalog-content__catalog-products">
-        <!-- Вероятно, изображения будут вставлены в будущем через псевдо-элемент :after в CSS
-        Пока просто повставлял "в лоб" в код HTML -->
         <div class="catalog-products__product-wrapper">
           <div class="catalog-products__product-price">
             310
