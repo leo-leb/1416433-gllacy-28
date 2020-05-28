@@ -18,35 +18,40 @@
         /></a>
         <nav class="header-nav">
           <div class="header-nav__catalog-wrapper">
-            <button type="button" class="button-alt button-alt-catalog">
+            <button type="button" class="button active">
               Каталог
             </button>
-            <select name="header-nav__catalog visually-hidden">
-              <option
-                value="new-items"
-                class="header-nav__catalog-item catalog-item-new"
-                >Новинки</option
+            <div class="header-nav__catalog-wrapper-in">
+              <select name="header-nav__catalog header-nav__catalog--active">
+                <option
+                  value="new-items"
+                  class="header-nav__catalog-item catalog-item-new"
+                  >Новинки</option
+                >
+                <option value="creamy" class="header-nav__catalog-item"
+                  >Сливочное</option
+                >
+                <option
+                  value="sherbets"
+                  class="header-nav__catalog-item"
+                  selected
+                  >Щербеты</option
+                >
+                <option value="fruit-ice" class="header-nav__catalog-item"
+                  >Фруктовый лед</option
+                >
+                <option value="melorin" class="header-nav__catalog-item"
+                  >Мелорин</option
+                ></select
               >
-              <option value="creamy" class="header-nav__catalog-item"
-                >Сливочное</option
-              >
-              <option value="sherbets" class="header-nav__catalog-item" selected
-                >Щербеты</option
-              >
-              <option value="fruit-ice" class="header-nav__catalog-item"
-                >Фруктовый лед</option
-              >
-              <option value="melorin" class="header-nav__catalog-item"
-                >Мелорин</option
-              ></select
-            >
+            </div>
           </div>
           <a href="#" class="header-nav__link">Доставка и оплата</a>
           <a href="#" class="header-nav__link">О компании</a>
         </nav>
         <div class="header-buttons">
           <div class="header-nav__search-wrapper">
-            <button type="button" class="button-alt button-alt-search">
+            <button type="button" class="button button--search">
               <img
                 src="./img/icons/loupe.svg"
                 width="16px"
@@ -54,14 +59,16 @@
                 alt="search-icon"
               />
             </button>
-            <input
-              type="search"
-              class="header-buttons__search visually-hidden"
-              placeholder="Что ищем?"
-            />
+            <div class="header-nav__search-wrapper-in">
+              <input
+                type="search"
+                class="header-buttons__search header-buttons__search--active"
+                placeholder="Что ищем?"
+              />
+            </div>
           </div>
           <div class="header-nav__entrance-wrapper">
-            <button type="button" class="button-alt button-alt-entrance">
+            <button type="button" class="button button--entrance">
               <img
                 src="./img/icons/entrance.svg"
                 width="20px"
@@ -69,11 +76,13 @@
                 alt="exit-icon"
               />Вход
             </button>
-            <div class="header-nav__entrance-form visually-hidden">
+            <div
+              class="header-nav__entrance-form header-nav__entrance-form--active"
+            >
               <input type="email" placeholder="Электронная почта" />
               <input type="password" placeholder="Пароль" />
               <div class="entrance-form__row">
-                <button type="submit" class="button button-entrance">
+                <button type="submit" class="button button--alt">
                   Войти
                 </button>
                 <div class="entrance-form__links-wrapper">
@@ -84,7 +93,7 @@
             </div>
           </div>
           <div class="header-nav__basket-wrapper">
-            <button type="button" class="button-alt button-alt-basket">
+            <button type="button" class="button button--basket">
               <img
                 src="./img/icons/basket-red.svg"
                 width="20px"
@@ -92,7 +101,9 @@
                 alt="non-empty-basket-icon"
               />2 товара
             </button>
-            <div class="header-nav__basket-form visually-hidden">
+            <div
+              class="header-nav__basket-form header-nav__basket-form--active"
+            >
               <table class="basket-form__table">
                 <tr>
                   <td>
@@ -137,7 +148,7 @@
                   <td>450 руб.</td>
                 </tr>
               </table>
-              <button type="submit" class="button button-basket-confirm">
+              <button type="submit" class="button button--alt">
                 Оформить заказ
               </button>
             </div>
@@ -260,7 +271,7 @@
             </div>
           </div>
           <!-- // EXTENDER -->
-          <button name="catalog-content__button" type="submit">
+          <button name="button button--sort" type="submit">
             Применить
           </button>
         </div>

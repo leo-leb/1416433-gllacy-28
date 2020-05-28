@@ -18,35 +18,40 @@
         /></a>
         <nav class="header-nav">
           <div class="header-nav__catalog-wrapper">
-            <button type="button" class="button-alt button-alt-catalog">
+            <button type="button" class="button active">
               Каталог
             </button>
-            <select name="header-nav__catalog visually-hidden">
-              <option
-                value="new-items"
-                class="header-nav__catalog-item catalog-item-new"
-                >Новинки</option
+            <div class="header-nav__catalog-wrapper-in">
+              <select name="header-nav__catalog header-nav__catalog--active">
+                <option
+                  value="new-items"
+                  class="header-nav__catalog-item catalog-item-new"
+                  >Новинки</option
+                >
+                <option value="creamy" class="header-nav__catalog-item"
+                  >Сливочное</option
+                >
+                <option
+                  value="sherbets"
+                  class="header-nav__catalog-item"
+                  selected
+                  >Щербеты</option
+                >
+                <option value="fruit-ice" class="header-nav__catalog-item"
+                  >Фруктовый лед</option
+                >
+                <option value="melorin" class="header-nav__catalog-item"
+                  >Мелорин</option
+                ></select
               >
-              <option value="creamy" class="header-nav__catalog-item"
-                >Сливочное</option
-              >
-              <option value="sherbets" class="header-nav__catalog-item" selected
-                >Щербеты</option
-              >
-              <option value="fruit-ice" class="header-nav__catalog-item"
-                >Фруктовый лед</option
-              >
-              <option value="melorin" class="header-nav__catalog-item"
-                >Мелорин</option
-              ></select
-            >
+            </div>
           </div>
           <a href="#" class="header-nav__link">Доставка и оплата</a>
           <a href="#" class="header-nav__link">О компании</a>
         </nav>
         <div class="header-buttons">
           <div class="header-nav__search-wrapper">
-            <button type="button" class="button-alt button-alt-search">
+            <button type="button" class="button button--search">
               <img
                 src="./img/icons/loupe.svg"
                 width="16px"
@@ -54,14 +59,16 @@
                 alt="search-icon"
               />
             </button>
-            <input
-              type="search"
-              class="header-buttons__search visually-hidden"
-              placeholder="Что ищем?"
-            />
+            <div class="header-nav__search-wrapper-in">
+              <input
+                type="search"
+                class="header-buttons__search header-buttons__search--active"
+                placeholder="Что ищем?"
+              />
+            </div>
           </div>
           <div class="header-nav__entrance-wrapper">
-            <button type="button" class="button-alt button-alt-entrance">
+            <button type="button" class="button button--entrance">
               <img
                 src="./img/icons/entrance.svg"
                 width="20px"
@@ -69,11 +76,13 @@
                 alt="exit-icon"
               />Вход
             </button>
-            <div class="header-nav__entrance-form visually-hidden">
+            <div
+              class="header-nav__entrance-form header-nav__entrance-form--active"
+            >
               <input type="email" placeholder="Электронная почта" />
               <input type="password" placeholder="Пароль" />
               <div class="entrance-form__row">
-                <button type="submit" class="button button-entrance">
+                <button type="submit" class="button button--alt">
                   Войти
                 </button>
                 <div class="entrance-form__links-wrapper">
@@ -83,7 +92,7 @@
               </div>
             </div>
           </div>
-          <button type="submit" class="button-alt button-alt-basket">
+          <button type="submit" class="button button--basket">
             <img
               src="./img/icons/basket.svg"
               width="20px"
@@ -121,7 +130,7 @@
             />
           </div>
           <h1>Крем-брюле и пломбир с малиновым джемом</h1>
-          <button class="button button-index-content" type="submit">
+          <button class="button button--alt" type="submit">
             Давайте оба!
           </button>
         </section>
@@ -135,7 +144,7 @@
             При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ
             банку малинового варенья бесплатно.
           </p>
-          <button name="button button-index-content-alt" type="submit">
+          <button name="button button--alt" type="submit">
             Хочу варенье!
           </button>
         </article>
@@ -145,7 +154,7 @@
             При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
             шоколадной присыпки совершенно бесплатно.
           </p>
-          <button name="button button-index-content-alt" type="submit">
+          <button name="button button--alt" type="submit">
             Хочу шоколадки!
           </button>
         </article>
@@ -315,7 +324,7 @@
               placeholder="Электронная почта"
               class="index-content__subscribe-input"
             />
-            <button name="button button-index-content-alt" type="submit">
+            <button name="button button--alt" type="submit">
               Отправить
             </button>
           </div>
@@ -341,24 +350,6 @@
             >Большая Конюшенная улица, 19/8</a
           >
           <iframe src="https://yandex.ru/map-widget/v1/-/CCQmfUdiCC"> </iframe>
-        </div>
-        <div class="index-content__feedback-form visually-hidden">
-          <h2>
-            Мы обязательно вам ответим!
-          </h2>
-          <input type="text" placeholder="Как вас зовут?" />
-          <input type="email" placeholder="Ваша почта для ответа?" />
-          <textarea
-            name="registration-text"
-            id="registration-text-"
-            cols="40"
-            rows="5"
-          >
-Напишите что-нибудь...</textarea
-          >
-          <button type="submit" class="button button-entrance">
-            Отправить
-          </button>
         </div>
       </div>
       <!-- // MAP -->
@@ -420,5 +411,25 @@
         </div>
       </div>
     </footer>
+    <div
+      class="index-content__feedback-form index-content__feedback-form--active"
+    >
+      <h2>
+        Мы обязательно вам ответим!
+      </h2>
+      <input type="text" placeholder="Как вас зовут?" />
+      <input type="email" placeholder="Ваша почта для ответа?" />
+      <textarea
+        name="registration-text"
+        id="registration-text-"
+        cols="40"
+        rows="5"
+      >
+Напишите что-нибудь...</textarea
+      >
+      <button type="submit" class="button button--alt">
+        Отправить
+      </button>
+    </div>
   </body>
 </html>
