@@ -8,8 +8,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header>
@@ -23,12 +23,21 @@
         /></a>
         <nav class="header-nav">
           <ul>
-            <li>
-              <div class="header-nav__catalog">
-                <button type="button" class="button" autofocus>
+            <li class="header-nav__catalog">
+                <!-- <a href="#" class="button">Каталог</a> -->
+                <button type="button" class="button" autofocus>Каталог</button>
+                <div class="catalog__dropdown hide">
+                  <a href="#">Новинки</a>
+                  <hr>
+                  <a href="./catalog-creamy.html">Сливочное</a>
+                  <a href="#">Щербеты</a>
+                  <a href="#">Фруктовый лед</a>
+                  <a href="#">Мелорин</a>
+                </div>
+                <!-- <button type="button" class="button" autofocus>
                   Каталог
                 </button>
-                <div class="catalog__dropdown black hide">
+                <div class="catalog__dropdown black">
                   <h2 class="visually-hidden">
                     Меню выбора продуктов из каталога
                   </h2>
@@ -54,8 +63,7 @@
                       >Мелорин</option
                     ></select
                   >
-                </div>
-              </div>
+                </div> -->
             </li>
             <li>
               <a href="#" class="header-nav__link">Доставка и оплата</a>
@@ -65,16 +73,16 @@
         </nav>
         <div class="header-buttons">
           <div class="header-buttons__search">
-            <form action="https://echo.htmlacademy.ru" method="get">
-              <button type="button" class="button">
-                <img
-                  src="./img/icons/loupe.svg"
-                  width="16px"
-                  height="16px"
-                  alt="Кнопка поиска"
-                />
-              </button>
-              <div class="search__popup hide">
+            <button type="button" class="button">
+              <img
+                src="./img/icons/loupe.svg"
+                width="16px"
+                height="16px"
+                alt="Кнопка поиска"
+              />
+            </button>
+            <div class="search__popup hide">
+              <form action="https://echo.htmlacademy.ru" method="get">
                 <input
                   type="search"
                   name="search-query"
@@ -82,8 +90,8 @@
                   alt="Строка поиска"
                   required
                 />
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
           <div class="header-buttons__entrance">
             <button type="button" class="button">
@@ -109,7 +117,7 @@
                 <input type="email" name="login" placeholder="email@example.com" alt="Ввод личной почты" required />
                 <input type="password" name="password" alt="Ввод пароля" placeholder="......" required />
                 <div class="entrance__row">
-                  <button type="submit" class="button--alt">
+                  <button type="submit" class="button button--alt">
                     Войти
                   </button>
                   <ul>
@@ -185,7 +193,7 @@
                 </tr>
               </table>
               <p>Итого: 750руб.</p>
-              <button type="submit" class="button--alt">
+              <button type="submit" class="button button--alt">
                 Оформить заказ
               </button>
             </div>
@@ -199,7 +207,6 @@
         </div>
       </div>
     </header>
-    <div class="color"></div>
     <main class="index-content">
       <div class="container">
         <!-- MAIN-OFFER -->
@@ -222,7 +229,7 @@
               />
             </div>
             <h1>Крем-брюле и пломбир с малиновым джемом</h1>
-            <button type="submit" class="button--alt">
+            <button type="submit" class="button button--alt">
               Давайте оба!
             </button>
           </section>
@@ -236,7 +243,7 @@
               При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ
               банку малинового варенья бесплатно.
             </p>
-            <button type="submit" class="button--alt" >
+            <button type="submit" class="button button--alt" >
               Хочу варенье!
             </button>
           </article>
@@ -246,7 +253,7 @@
               При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей
               шоколадной присыпки совершенно бесплатно.
             </p>
-            <button type="submit" class="button--alt" >
+            <button type="submit" class="button button--alt" >
               Хочу шоколадки!
             </button>
           </article>
@@ -425,7 +432,7 @@
             </p></label>
             <form action="https://echo.htmlacademy.ru" method="post" >
               <input type="email" name="email" placeholder="email@example.com" id="subscription-input" required />
-              <button type="submit" class="button--alt">
+              <button type="submit" class="button button--alt">
                 Отправить
               </button>
             </form>
@@ -455,7 +462,7 @@
               10 до 20 ежедневно)
             </p>
             <p></p>
-            <button type="submit" class="button--alt">
+            <button type="submit" class="button button--alt">
               Форма обратно связи
             </button>
           </div>
@@ -578,7 +585,7 @@
           placeholder="Напишите что-нибудь..."
           required
         ></textarea>
-        <button type="submit" class="button--alt">Отправить</button>
+        <button type="submit" class="button button--alt">Отправить</button>
       </form>
     </div>
   </body>

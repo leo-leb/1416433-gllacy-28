@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GllacyShop: Каталог</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <header>
       <div class="header-row">
-        <a href="#" class="logo"
+        <a href="./index.html" class="logo"
           ><img
             src="./img/icons/logo.svg"
             width="154px"
@@ -61,16 +65,16 @@
         </nav>
         <div class="header-buttons">
           <div class="header-buttons__search">
-            <form action="https://echo.htmlacademy.ru" method="get">
-              <button type="button" class="button">
-                <img
-                  src="./img/icons/loupe.svg"
-                  width="16px"
-                  height="16px"
-                  alt="Кнопка поиска"
-                />
-              </button>
-              <div class="search__popup hide">
+            <button type="button" class="button">
+              <img
+                src="./img/icons/loupe.svg"
+                width="16px"
+                height="16px"
+                alt="Кнопка поиска"
+              />
+            </button>
+            <div class="search__popup hide">
+              <form action="https://echo.htmlacademy.ru" method="get">
                 <input
                   type="search"
                   name="search-query"
@@ -78,8 +82,8 @@
                   alt="Строка поиска"
                   required
                 />
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
           <div class="header-buttons__entrance">
             <button type="button" class="button">
@@ -105,7 +109,7 @@
                 <input type="email" name="login" placeholder="email@example.com" alt="Ввод личной почты" required />
                 <input type="password" name="password" alt="Ввод пароля" placeholder="......" required />
                 <div class="entrance__row">
-                  <button type="submit" class="button--alt">
+                  <button type="submit" class="button button--alt">
                     Войти
                   </button>
                   <ul>
@@ -181,7 +185,7 @@
                 </tr>
               </table>
               <p>Итого: 750руб.</p>
-              <button type="submit" class="button--alt">
+              <button type="submit" class="button button--alt">
                 Оформить заказ
               </button>
             </div>
