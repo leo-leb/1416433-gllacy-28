@@ -48,7 +48,6 @@
 }
 
 body {
-  max-width: 1200px;
   position: relative;
   margin: 0;
   padding: 0;
@@ -57,28 +56,23 @@ body {
   color: var(--white-pure);
 }
 
-.body__wrapper-1 {
+.body__wrapper-green {
   background-color: var(--green-light);
 }
 
-.body__wrapper-2 {
+.body__wrapper-blue-gray {
   background-color: var(--blue-gray);
 }
 
-.body__wrapper-3 {
+.body__wrapper-brown-gray {
   background-color: var(--brown-gray);
 }
 
 header,
 footer {
-  min-width: 1200px;
-  padding: 0 27px;
-}
-
-main {
   width: 1200px;
-  min-width: 940px;
   margin: 0 auto;
+  padding: 0 27px;
 }
 
 header {
@@ -88,6 +82,12 @@ header {
 footer {
   padding-top: 15px;
   padding-bottom: 25px;
+}
+
+main {
+  width: 1200px;
+  min-width: 940px;
+  margin: 0 auto;
 }
 
 .container {
@@ -156,7 +156,7 @@ a {
   text-decoration: none;
 }
 
-a:not(.header-nav__link):not(.catalog__item):not(.footer-social__icon):not(.button--fb):not(.slider-item.button--alt):hover,
+a:not(.header-nav__link):not(.catalog__item):not(.footer-social__icon):not(.button--fb):hover,
 a:not(.header-nav__link):not(.catalog__item):not(.footer-social__icon):not(.button--fb):active {
   border-color: var(--pink-light);
 
@@ -285,9 +285,12 @@ svg {
   text-decoration: none;
 }
 
+/* --- HEADER-NAV --- */
+
 .header-nav {
   align-self: stretch;
   flex-grow: 1;
+  margin-right: 10px;
 }
 
 .header-nav ul {
@@ -301,15 +304,6 @@ svg {
   padding: 0;
 }
 
-.header-nav li {
-  line-height: 32px;
-  margin-right: 32px;
-}
-
-.header-nav li:last-child {
-  margin-right: 0;
-}
-
 .header-nav__catalog {
   position: relative;
 
@@ -319,6 +313,15 @@ svg {
 .header-nav__catalog.main {
   margin-right: 19px;
   margin-left: 11px;
+}
+
+.header-nav li {
+  line-height: 32px;
+  margin-right: 32px;
+}
+
+.header-nav li:last-child {
+  margin-right: 0;
 }
 
 .header-nav li:first-child:hover {
@@ -389,15 +392,6 @@ svg {
   color: var(--black-medium);
 }
 
-.catalog__dropdown a {
-  display: block;
-
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.14;
-  color: var(--black-medium);
-}
-
 .catalog__dropdown a:hover {
   background-color: var(--brown-light);
 }
@@ -438,6 +432,8 @@ svg {
 }
 
 .catalog__dropdown a {
+  display: block;
+
   margin-bottom: 2px;
   padding-left: 20px;
 
@@ -478,6 +474,10 @@ svg {
 .header-nav__catalog:hover .catalog__dropdown {
   display: block;
 }
+
+/* --- // HEADER-NAV --- */
+
+/* --- HEADER-BUTTONS --- */
 
 .header-buttons {
   display: flex;
@@ -671,6 +671,8 @@ svg {
   line-height: 1.07;
   text-align: right;
 }
+
+/* --- // HEADER-BUTTONS --- */
 
 .header-contacts {
   margin-left: auto;
@@ -920,6 +922,7 @@ svg {
 
 .index-content__shop-desc {
   width: 100%;
+  margin-top: 20px;
   margin-bottom: 38px;
   padding: 24px 21px 36px;
   border-radius: 16px;
@@ -990,7 +993,14 @@ svg {
   text-decoration: none;
 }
 
+.index-content__subscription-wrapper {
+  border-radius: 16px;
+  padding: 6px;
+  background-image: url(../img/post-bg.png);
+}
+
 .index-content__subscription {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1000,12 +1010,6 @@ svg {
 
   font-weight: 400;
   background-color: var(--white-dirty);
-
-  border-image-source: url(../img/post-bg.png);
-  border-image-width: 6px;
-  border-style: solid;
-  border-image-slice: 5;
-  border-image-repeat: round;
 }
 
 .index-content__subscription p {
@@ -1468,13 +1472,17 @@ svg {
 
 /* --------- CATALOG-CONTENT --------- */
 
-.index-content .catalog-content__products {
+.catalog-content__products {
   margin-bottom: 18px;
+  width: 1172px;
+  margin: 0 auto;
 }
 
 .catalog-content__products ul {
   display: grid;
-  grid-template-columns: 280px 293px 293px 280px;
+  grid-template-columns: 293px 293px 293px 293px;
+  grid-template-rows: 343px;
+  grid-auto-rows: 343px;
   row-gap: 13px;
 
   margin: 0;
@@ -1489,20 +1497,20 @@ svg {
   border-radius: 4px;
 }
 
-.catalog-content__products li:first-child,
-.catalog-content__products li:nth-child(4n + 1) {
-  padding-left: 0;
-  padding-right: 13px;
-}
-
-.catalog-content__products li:nth-child(4n) {
+.catalog-content__products li {
   padding-left: 13px;
-  padding-right: 0;
+  padding-right: 13px;
 }
 
 .catalog-content__products li:hover {
   background-color: var(--white-light);
   box-shadow: 0px 20px 20px var(--black-easy);
+  height: 402px;
+  z-index: 1;
+}
+
+.catalog-content__products li:hover .button--alt {
+  display: block;
 }
 
 .products__wrapper {
@@ -1542,7 +1550,7 @@ svg {
   text-align: center;
 }
 
-.products__desc a {
+.products__desc > a {
   border-bottom: 1px solid var(--white-light);
 
   color: var(--white-pure);
@@ -1552,6 +1560,15 @@ svg {
 .catalog-content h1 {
   margin: 0;
   margin-bottom: 25px;
+}
+
+.catalog-content__products .button--alt {
+  display: none;
+  margin-top: 11px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+  line-height: 44px;
 }
 
 .pages {
@@ -1724,6 +1741,33 @@ footer a {
 
 /* --- FEEDBACK-FORM --- */
 
+#feedback-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background: var(--dark);
+}
+
+#feedback-overlay:target {
+  display: block;
+}
+
+.feedback__popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 477px;
+  padding: 20px 25px 27px;
+  border-radius: 6px;
+
+  background-color: var(--white-dirty);
+}
+
 .feedback__popup form {
   margin: 0;
 }
@@ -1767,19 +1811,6 @@ textarea::placeholder {
   color: var(--gray-medium);
 }
 
-.feedback__popup {
-  position: fixed;
-  top: 338px;
-  left: 50%;
-  transform: translateX(-50%);
-
-  width: 477px;
-  padding: 20px 25px 27px;
-  border-radius: 6px;
-
-  background-color: var(--white-dirty);
-}
-
 .feedback__popup h2 {
   margin-bottom: 26px;
 
@@ -1789,20 +1820,6 @@ textarea::placeholder {
 .feedback__popup input {
   width: 267px;
   margin-bottom: 20px;
-}
-
-#dark {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  background: var(--dark);
-}
-
-#dark:target {
-  display: block;
 }
 
 /* --- // FEEDBACK-FORM --- */

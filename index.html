@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body class="body__wrapper-1">
+  <body class="body__wrapper-green">
     <header>
       <div class="header-row">
         <a href="#" class="logo"
@@ -203,7 +203,7 @@
                   />
                 </div>
                 <h1>Крем-брюле и пломбир с малиновым джемом</h1>
-                <a type="submit" class="button button--alt">Давайте оба!</a>
+                <button type="submit" class="button button--alt">Давайте оба!</button>
             </li>
             <li class="slider-item slide">
                 <div class="general-offer__ice-cream-wrapper ice-cream-wrapper-2">
@@ -223,7 +223,7 @@
                   />
                 </div>
                 <h1>Шоколадный пломбир и лимонный сорбет</h1>
-                <a type="submit" class="button button--alt">Давайте оба!</a>
+                <button type="submit" class="button button--alt">Давайте оба!</button>
             </li>
             <li class="slider-item slide">
                 <div class="general-offer__ice-cream-wrapper ice-cream-wrapper-3">
@@ -243,7 +243,7 @@
                   />
                 </div>
                 <h1>Пломбир с помадкой и клубничный щербет</h1>
-                <a type="submit" class="button button--alt">Давайте оба!</a>
+                <button type="submit" class="button button--alt">Давайте оба!</button>
             </li>
           </ul>
           <div class="slider-controls">
@@ -276,10 +276,12 @@
         </div>
         <!-- // PROFIT-OFFER -->
         <!-- HIT-OFFER -->
-        <section class="catalog-content__products">
-          <h2 class="visually-hidden">Раздел популярных продуктов</h2>
-          <ul>
-            <li>
+      </div>
+      <!-- HIT-OFFER -->
+      <section class="catalog-content__products">
+        <h2 class="visually-hidden">Раздел популярных продуктов</h2>
+        <ul>
+          <li>
               <div class="products__wrapper">
                 <img
                 src="./img/products/1-icon.png"
@@ -303,8 +305,9 @@
                   >Сливочное с апельсиновым джемом и цитрусовой стружкой</a
                 >
               </p>
-            </li>
-            <li>
+              <button class="button button--alt" type="button">Быстрый просмотр</button>
+          </li>
+          <li>
               <div class="products__wrapper">
                 <img
                   src="./img/products/2-icon.png"
@@ -326,8 +329,9 @@
               <p class="products__desc">
                 <a href="#">Сливочно-кофейное с кусочками шоколада</a>
               </p>
-            </li>
-            <li>
+              <button class="button button--alt" type="button">Быстрый просмотр</button>
+          </li>
+          <li>
               <div class="products__wrapper">
                 <img
                 src="./img/products/3-icon.png"
@@ -349,8 +353,9 @@
               <p class="products__desc">
                 <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
               </p>
-            </li>
-            <li>
+              <button class="button button--alt" type="button">Быстрый просмотр</button>
+          </li>
+          <li>
               <div class="products__wrapper">
                 <img
                 src="./img/products/4-icon.png"
@@ -372,10 +377,12 @@
               <p class="products__desc">
                 <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
               </p>
-            </li>
-          </ul>
-        </section>
-        <!-- // HIT-OFFER -->
+              <button class="button button--alt" type="button">Быстрый просмотр</button>
+          </li>
+        </ul>
+      </section>
+      <!-- // HIT-OFFER -->
+      <div class="container">
         <!-- ABOUT-SHOP -->
         <section class="index-content__shop-desc">
           <span class="visually-hidden">Информация о магазине</span>
@@ -447,20 +454,22 @@
               <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
             </h4>
           </article>
-          <article class="index-content__subscription">
-            <h2 class="visually-hidden">Раздел подписки на рассылку</h2>
-            <label for="subscription-input"><p>
-              Подпишитесь на сладкую рассылку и будьте всегда в курсе всего самого
-              вкусного, что у нас происходит. Обещаем не спамить и не слать всякой
-              ненужной ерунды. Честно =)
-            </p></label>
-            <form action="https://echo.htmlacademy.ru" method="post" >
-              <input type="email" name="email" placeholder="email@example.com" id="subscription-input" required />
-              <button type="submit" class="button button--alt">
-                Отправить
-              </button>
-            </form>
-          </article>
+          <div class="index-content__subscription-wrapper">
+            <article class="index-content__subscription">
+              <h2 class="visually-hidden">Раздел подписки на рассылку</h2>
+              <label for="subscription-input"><p>
+                Подпишитесь на сладкую рассылку и будьте всегда в курсе всего самого
+                вкусного, что у нас происходит. Обещаем не спамить и не слать всякой
+                ненужной ерунды. Честно =)
+              </p></label>
+              <form action="https://echo.htmlacademy.ru" method="post" >
+                <input type="email" name="email" placeholder="email@example.com" id="subscription-input" required />
+                <button type="submit" class="button button--alt">
+                  Отправить
+                </button>
+              </form>
+            </article>
+          </div>
         </div>
         <!-- ADDITIONAL-CONTENT -->
       </div>
@@ -492,7 +501,7 @@
               Для заказов по телефону:<br /><span>8 812 450/25/25</span><br />(с
               10 до 20 ежедневно)
             </p>
-            <a href="#dark" class="button button--alt button--fb">
+            <a href="#feedback-overlay" class="button button--alt button--fb">
               Форма обратной связи
             </a>
           </div>
@@ -592,7 +601,7 @@
         </div>
       </div>
     </footer>
-    <div id="dark">
+    <div id="feedback-overlay">
       <div class="feedback__popup" id="feedback">
         <h2>Мы обязательно вам ответим!</h2>
         <a href="#button-cross" class="button-cross">
