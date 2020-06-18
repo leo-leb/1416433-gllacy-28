@@ -1255,6 +1255,8 @@ svg {
   color: inherit;
 
   background-color: inherit;
+
+  -moz-appearance: textfield;
 }
 
 .box-price__number input::-webkit-inner-spin-button {
