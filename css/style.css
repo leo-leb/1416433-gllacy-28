@@ -1691,7 +1691,7 @@ footer a {
   margin-bottom: 0;
 }
 
-.footer-nav .footer-nav__link {
+.footer-nav__link {
   border-bottom: 1px solid var(--white-light);
 
   font-size: 13px;
@@ -1700,13 +1700,13 @@ footer a {
   color: var(--white-pure);
 }
 
-.footer-nav .footer-nav__link:hover {
+.footer-nav__link:hover {
   border-color: var(--pink-light);
 
   color: var(--pink-medium);
 }
 
-.footer-nav .footer-nav__link:link {
+.footer-nav__link:active {
   border-color: var(--pink-light);
 
   color: var(--pink-medium);
