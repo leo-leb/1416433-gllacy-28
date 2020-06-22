@@ -59,7 +59,7 @@ function initMap() {
 
   var myMap = new google.maps.Map(document.getElementById("map"), opt);
 
-  var image = "/img/icons/ice-pin.png";
+  var image = "img/icons/ice-pin.png";
 
   var marker = new google.maps.Marker({
     position: pos,
