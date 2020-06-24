@@ -1,9 +1,10 @@
 // FEEDBACK-FORM
 
 var feedback = document.querySelector(".feedback-overlay");
-var feedback__open = document.querySelector(".button--fb");
+var office_info = document.querySelector(".map-holder__about-office");
+var feedback__open = office_info.querySelector(".button--alt");
 var feedback__form = document.querySelector(".feedback__popup");
-var feedback__close = feedback__form.querySelector(".feedback__button-cross");
+var feedback__close = feedback__form.querySelector(".button-cross");
 var firstname = feedback__form.querySelector("[name=firstname]");
 var email = feedback__form.querySelector("[name=email]");
 var storage_firstname = localStorage.getItem("firstname");
@@ -84,9 +85,9 @@ dot_1.addEventListener("click", function (evt) {
   slide_1.classList.add("current");
   slide_2.classList.remove("current");
   slide_3.classList.remove("current");
-  body_wrapper.classList.add("body__wrapper-green");
-  body_wrapper.classList.remove("body__wrapper-blue-gray");
-  body_wrapper.classList.remove("body__wrapper-brown-gray");
+  body_wrapper.classList.add("wrapper-green");
+  body_wrapper.classList.remove("wrapper-blue");
+  body_wrapper.classList.remove("wrapper-brown");
   dot_1.classList.add("current");
   dot_2.classList.remove("current");
   dot_3.classList.remove("current");
@@ -97,9 +98,9 @@ dot_2.addEventListener("click", function (evt) {
   slide_1.classList.remove("current");
   slide_2.classList.add("current");
   slide_3.classList.remove("current");
-  body_wrapper.classList.remove("body__wrapper-green");
-  body_wrapper.classList.add("body__wrapper-blue-gray");
-  body_wrapper.classList.remove("body__wrapper-brown-gray");
+  body_wrapper.classList.remove("wrapper-green");
+  body_wrapper.classList.add("wrapper-blue");
+  body_wrapper.classList.remove("wrapper-brown");
   dot_1.classList.remove("current");
   dot_2.classList.add("current");
   dot_3.classList.remove("current");
@@ -110,9 +111,9 @@ dot_3.addEventListener("click", function (evt) {
   slide_1.classList.remove("current");
   slide_2.classList.remove("current");
   slide_3.classList.add("current");
-  body_wrapper.classList.remove("body__wrapper-green");
-  body_wrapper.classList.remove("body__wrapper-blue-gray");
-  body_wrapper.classList.add("body__wrapper-brown-gray");
+  body_wrapper.classList.remove("wrapper-green");
+  body_wrapper.classList.remove("wrapper-blue");
+  body_wrapper.classList.add("wrapper-brown");
   dot_1.classList.remove("current");
   dot_2.classList.remove("current");
   dot_3.classList.add("current");
