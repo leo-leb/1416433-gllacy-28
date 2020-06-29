@@ -12,9 +12,9 @@
     <link rel="stylesheet" href="./css/style-short.css" />
   </head>
   <body class="wrapper-green">
-    <header>
+    <header class="header">
       <div class="header-row">
-        <a href="./index.html" class="logo"
+        <a href="./index.html" class="logo" tabindex="1"
           ><img
             src="./img/icons/logo.svg"
             width="154"
@@ -46,7 +46,7 @@
         </nav>
         <div class="header-buttons">
           <div class="header-buttons__unit unit_search">
-            <button type="button" class="button non-fill">
+            <a href="#" class="button non-fill">
               <span class="visually-hidden">Поиск по сайту</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +60,7 @@
                   d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"
                 />
               </svg>
-            </button>
+            </a>
             <div class="popup popup-search">
               <form action="https://echo.htmlacademy.ru" method="get">
                 <span class="visually-hidden"
@@ -69,6 +69,7 @@
                 <input
                   type="search"
                   name="search-query"
+                  class="input"
                   placeholder="Что ищем?"
                   required
                 />
@@ -76,7 +77,7 @@
             </div>
           </div>
           <div class="header-buttons__unit unit_entrance">
-            <button type="button" class="button">
+            <a href="#" class="button">
               <span class="visually-hidden">Вход в личный кабинет</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +94,7 @@
                 </g>
               </svg>
               <span>Вход</span>
-            </button>
+            </a>
             <div class="popup popup-entrance">
               <form action="https://echo.htmlacademy.ru" method="post">
                 <span class="visually-hidden"
@@ -103,12 +104,14 @@
                   type="email"
                   name="login"
                   placeholder="email@example.com"
+                  class="input"
                   required
                 />
                 <input
                   type="password"
                   name="password"
                   placeholder="......"
+                  class="input"
                   required
                 />
                 <div class="entrance__row">
@@ -117,10 +120,12 @@
                   </button>
                   <ul>
                     <li>
-                      <a href="#" class="entrance__link base">Забыли пароль?</a>
+                      <a href="#" class="base-link entrance__link"
+                        >Забыли пароль?</a
+                      >
                     </li>
                     <li>
-                      <a href="#" class="entrance__link base"
+                      <a href="#" class="base-link entrance__link"
                         >Новая регистрация</a
                       >
                     </li>
@@ -130,7 +135,7 @@
             </div>
           </div>
           <div class="header-buttons__unit unit_basket non-empty">
-            <button type="button" class="button">
+            <a href="#" class="button">
               <img
                 src="./img/icons/basket-red.svg"
                 width="20"
@@ -138,61 +143,69 @@
                 alt="Корзина покупателя"
               />
               <span>2 товара</span>
-            </button>
+            </a>
             <div class="popup popup-basket">
-              <table class="basket__table">
-                <tr>
-                  <td>
-                    <button type="button" class="button-cross">
+              <form
+                action="https://echo.htmlacademy.ru"
+                id="form"
+                method="post"
+              >
+                <table class="basket__table">
+                  <tr>
+                    <td>
+                      <button type="button" class="button-cross"></button>
+                    </td>
+                    <td>
                       <img
-                        src="./img/icons/cross-small.svg"
-                        width="11"
-                        height="11"
-                        alt="Удалить данную позицию из корзины"
+                        src="./img/products/1-icon.png"
+                        width="33"
+                        height="33"
+                        alt="Фото продукта"
                       />
-                    </button>
-                  </td>
-                  <td>
-                    <img
-                      src="./img/products/1-icon.png"
-                      width="33"
-                      height="33"
-                      alt="Фото продукта"
-                    />
-                  </td>
-                  <td>Пломбир с апельсиновым джемом</td>
-                  <td>1,5кг х <span>200 руб.</span></td>
-                  <td>300 руб.</td>
-                </tr>
-                <tr>
-                  <td>
-                    <button type="button" class="button-cross">
+                    </td>
+                    <td class="basket__product"><textarea name="product" rows="1" form="form">Пломбир с апельсиновым джемом</textarea> </td>
+                    <td class="basket__amount"><input name="amount" value="1,5" form="form" />кг х</td>
+                    <td class="basket__price">
+                      <input name="price" value="200"form="form" />
+                      руб.
+                    </td>
+                    <td class="basket__cost">
+                      <input name="cost" value="300"form="form" />
+                      руб.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <button type="button" class="button-cross"></button>
+                    </td>
+                    <td>
                       <img
-                        src="./img/icons/cross-small.svg"
-                        width="11"
-                        height="11"
-                        alt="Удалить данную позицию из корзины"
+                        src="./img/products/3-icon.png"
+                        width="33"
+                        height="33"
+                        alt="Фото продукта"
                       />
-                    </button>
-                  </td>
-                  <td>
-                    <img
-                      src="./img/products/3-icon.png"
-                      width="33"
-                      height="33"
-                      alt="Фото продукта"
-                    />
-                  </td>
-                  <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-                  <td>1,5кг х <span>300 руб.</span></td>
-                  <td>450 руб.</td>
-                </tr>
-              </table>
-              <hr />
-              <p>Итого: 750руб.</p>
-              <button type="submit" class="button--alt">
-                Оформить заказ
-              </button>
+                    </td>
+                    <td class="basket__product">
+                      <textarea name="product" rows="auto" form="form">Клубничный пломбир с присыпкой из белого шоколада</textarea>
+                    </td>
+                    <td class="basket__amount"><input name="amount" value="1,5"form="form" />кг х</td>
+                    <td class="basket__price">
+                      <input name="price" value="300"form="form" />руб.
+                    </td>
+                    </td>
+                    <td class="basket__cost">
+                      <input name="cost" value="450"form="form" />
+                      руб.
+                    </td>
+                  </tr>
+                </table>
+                <hr />
+                <div class="basket__sum">Итого:<input class="basket__total-order" name="total-order" value="750"form="form" />руб.</div>
+                <button type="submit" class="button--alt" form="form">
+                  Оформить заказ
+                </button>
+              </form>
             </div>
           </div>
         </div>
@@ -248,6 +261,7 @@
                         name="min-price"
                         value="100"
                         step="5"
+                        class="input"
                       /><img
                         src="./img/icons/ruble.svg"
                         width="10"
@@ -261,6 +275,7 @@
                         name="max-price"
                         value="500"
                         step="5"
+                        class="input"
                       /><img
                         src="./img/icons/ruble.svg"
                         width="10"
@@ -303,7 +318,7 @@
                       <label class="box__option"
                         ><input
                           type="radio"
-                          class="real-radio"
+                          class="real-radio visually-hidden"
                           name="fat"
                           value="0%"
                         /><span class="custom-radio first"></span>0%</label
@@ -313,7 +328,7 @@
                       <label class="box__option"
                         ><input
                           type="radio"
-                          class="real-radio"
+                          class="real-radio visually-hidden"
                           name="fat"
                           value="до 10%"
                           checked
@@ -324,7 +339,7 @@
                       <label class="box__option"
                         ><input
                           type="radio"
-                          class="real-radio"
+                          class="real-radio visually-hidden"
                           name="fat"
                           value="до 30%"
                         /><span class="custom-radio"></span>до 30%</label
@@ -334,7 +349,7 @@
                       <label class="box__option"
                         ><input
                           type="radio"
-                          class="real-radio"
+                          class="real-radio visually-hidden"
                           name="fat"
                           value="более 30%"
                         /><span class="custom-radio"></span>выше 30%</label
@@ -357,7 +372,7 @@
                       <label class="box__option"
                         ><input
                           type="checkbox"
-                          class="real-checkbox"
+                          class="real-checkbox visually-hidden"
                           name="extender"
                           value="шоколадные"
                           checked
@@ -370,7 +385,7 @@
                       <label class="box__option"
                         ><input
                           type="checkbox"
-                          class="real-checkbox"
+                          class="real-checkbox visually-hidden"
                           name="extender"
                           value="сахарные присыпки"
                           checked
@@ -383,7 +398,7 @@
                       <label class="box__option"
                         ><input
                           type="checkbox"
-                          class="real-checkbox"
+                          class="real-checkbox visually-hidden"
                           name="extender"
                           value="фрукты"
                         />
@@ -394,7 +409,7 @@
                       <label class="box__option"
                         ><input
                           type="checkbox"
-                          class="real-checkbox"
+                          class="real-checkbox visually-hidden"
                           name="extender"
                           value="сиропы"
                         />
@@ -405,7 +420,7 @@
                       <label class="box__option"
                         ><input
                           type="checkbox"
-                          class="real-checkbox"
+                          class="real-checkbox visually-hidden"
                           name="extender"
                           value="джемы"
                         />
@@ -451,9 +466,9 @@
                 >Сливочное с апельсиновым джемом и цитрусовой стружкой</a
               >
             </p>
-            <button class="button--alt" type="button">
-              Быстрый просмотр
-            </button>
+            <div class="products_button-wrapper">
+              <a href="#" class="button--alt">Быстрый просмотр</a>
+            </div>
           </li>
           <li>
             <div class="products__wrapper">
@@ -478,9 +493,9 @@
                 >Сливочно-кофейное с кусочками шоколада</a
               >
             </p>
-            <button class="button--alt" type="button">
-              Быстрый просмотр
-            </button>
+            <div class="products_button-wrapper">
+              <a href="#" class="button--alt">Быстрый просмотр</a>
+            </div>
           </li>
           <li>
             <div class="products__wrapper">
@@ -505,9 +520,9 @@
                 >Сливочно-клубничное с присыпкой из белого шоколада</a
               >
             </p>
-            <button class="button--alt" type="button">
-              Быстрый просмотр
-            </button>
+            <div class="products_button-wrapper">
+              <a href="#" class="button--alt">Быстрый просмотр</a>
+            </div>
           </li>
           <li>
             <div class="products__wrapper">
@@ -532,9 +547,9 @@
                 >Сливочное крем-брюле с карамельной подливкой</a
               >
             </p>
-            <button class="button--alt" type="button">
-              Быстрый просмотр
-            </button>
+            <div class="products_button-wrapper">
+              <a href="#" class="button--alt">Быстрый просмотр</a>
+            </div>
           </li>
           <li>
             <div class="products__wrapper">
@@ -557,9 +572,9 @@
             <p class="products__desc">
               <a href="#" class="base-link">Сливочное с брусничным джемом</a>
             </p>
-            <button class="button--alt" type="button">
-              Быстрый просмотр
-            </button>
+            <div class="products_button-wrapper">
+              <a href="#" class="button--alt">Быстрый просмотр</a>
+            </div>
           </li>
           <li>
             <div class="products__wrapper">
@@ -584,9 +599,9 @@
                 >Сливочно-черничное с цельными ягодами черники</a
               >
             </p>
-            <button class="button--alt" type="button">
-              Быстрый просмотр
-            </button>
+            <div class="products_button-wrapper">
+              <a href="#" class="button--alt">Быстрый просмотр</a>
+            </div>
           </li>
           <li>
             <div class="products__wrapper">
@@ -611,9 +626,9 @@
                 >Сливочное-лимонное с карамельной присыпкой</a
               >
             </p>
-            <button class="button--alt" type="button">
-              Быстрый просмотр
-            </button>
+            <div class="products_button-wrapper">
+              <a href="#" class="button--alt">Быстрый просмотр</a>
+            </div>
           </li>
           <li>
             <div class="products__wrapper">
@@ -636,9 +651,9 @@
             <p class="products__desc">
               <a href="#" class="base-link">Сливочное с шоколадной стружкой</a>
             </p>
-            <button class="button--alt" type="button">
-              Быстрый просмотр
-            </button>
+            <div class="products_button-wrapper">
+              <a href="#" class="button--alt">Быстрый просмотр</a>
+            </div>
           </li>
           <li>
             <div class="products__wrapper">
@@ -663,9 +678,9 @@
                 >Сливочно-ванильное с кусочками шоколада</a
               >
             </p>
-            <button class="button--alt" type="button">
-              Быстрый просмотр
-            </button>
+            <div class="products_button-wrapper">
+              <a href="#" class="button--alt">Быстрый просмотр</a>
+            </div>
           </li>
           <li>
             <div class="products__wrapper">
@@ -688,9 +703,9 @@
             <p class="products__desc">
               <a href="#" class="base-link">Сливочное с ментоловым сиропом</a>
             </p>
-            <button class="button--alt" type="button">
-              Быстрый просмотр
-            </button>
+            <div class="products_button-wrapper">
+              <a href="#" class="button--alt">Быстрый просмотр</a>
+            </div>
           </li>
           <li>
             <div class="products__wrapper">
@@ -715,9 +730,9 @@
                 >Сливочное с кусочками черного шоколада</a
               >
             </p>
-            <button class="button--alt" type="button">
-              Быстрый просмотр
-            </button>
+            <div class="products_button-wrapper">
+              <a href="#" class="button--alt">Быстрый просмотр</a>
+            </div>
           </li>
           <li>
             <div class="products__wrapper">
@@ -740,15 +755,15 @@
             <p class="products__desc">
               <a href="#" class="base-link">Сливочное с мятным сиропом</a>
             </p>
-            <button class="button--alt" type="button">
-              Быстрый просмотр
-            </button>
+            <div class="products_button-wrapper">
+              <a href="#" class="button--alt">Быстрый просмотр</a>
+            </div>
           </li>
         </ul>
       </section>
-      <div class="container">
+      <div class="container container-pages">
         <div class="pages">
-          <button class="pages__clicker">
+          <button class="pages__clicker" type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="8"
@@ -762,13 +777,15 @@
             </svg>
           </button>
           <ul>
-            <li class="pages__number pages__number-active">1</li>
-            <li class="pages__number">2</li>
-            <li class="pages__number">3</li>
-            <li class="pages__number">4</li>
-            <li class="pages__number">5</li>
+            <li class="pages__number pages__number-active">
+              <a href="#">1</a>
+            </li>
+            <li class="pages__number"><a href="#">2</a></li>
+            <li class="pages__number"><a href="#">3</a></li>
+            <li class="pages__number"><a href="#">4</a></li>
+            <li class="pages__number"><a href="#">5</a></li>
           </ul>
-          <button class="pages__clicker">
+          <button class="pages__clicker" type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="8"
@@ -785,7 +802,7 @@
         <hr />
       </div>
     </main>
-    <footer>
+    <footer class="footer">
       <div class="footer-social">
         <h2 class="visually-hidden">Раздел контактов в социальных сетях</h2>
         <a href="#" class="footer-social__icon facebook">

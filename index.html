@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/style-short.css" />
   </head>
   <body class="wrapper-green">
-    <header>
+    <header class="header">
       <div class="header-row">
         <a href="#" class="logo"
           ><img
@@ -24,7 +24,9 @@
         <nav class="header-nav">
           <ul>
             <li class="header-nav__catalog">
-              <a href="#" class="header-nav__link"><span>Каталог</span></a>
+              <a href="#" class="header-nav__link" tabindex="1"
+                ><span>Каталог</span></a
+              >
               <div class="catalog__dropdown">
                 <a href="#" class="catalog__item">Новинки</a>
                 <hr />
@@ -46,7 +48,7 @@
         </nav>
         <div class="header-buttons">
           <div class="header-buttons__unit unit_search">
-            <button type="button" class="button non-fill">
+            <a href="#" class="button non-fill">
               <span class="visually-hidden">Поиск по сайту</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +62,7 @@
                   d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"
                 />
               </svg>
-            </button>
+            </a>
             <div class="popup popup-search">
               <form action="https://echo.htmlacademy.ru" method="get">
                 <span class="visually-hidden"
@@ -70,13 +72,14 @@
                   type="search"
                   name="search-query"
                   placeholder="Что ищем?"
+                  class="input"
                   required
                 />
               </form>
             </div>
           </div>
           <div class="header-buttons__unit unit_entrance">
-            <button type="button" class="button">
+            <a href="#" class="button">
               <span class="visually-hidden">Вход в личный кабинет</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +96,7 @@
                 </g>
               </svg>
               <span>Вход</span>
-            </button>
+            </a>
             <div class="popup popup-entrance">
               <form action="https://echo.htmlacademy.ru" method="post">
                 <span class="visually-hidden"
@@ -103,12 +106,14 @@
                   type="email"
                   name="login"
                   placeholder="email@example.com"
+                  class="input"
                   required
                 />
                 <input
                   type="password"
                   name="password"
                   placeholder="......"
+                  class="input"
                   required
                 />
                 <div class="entrance__row">
@@ -117,12 +122,12 @@
                   </button>
                   <ul>
                     <li>
-                      <a href="#" class="entrance__link base-link"
+                      <a href="#" class="base-link entrance__link"
                         >Забыли пароль?</a
                       >
                     </li>
                     <li>
-                      <a href="#" class="entrance__link base-link"
+                      <a href="#" class="base-link entrance__link"
                         >Новая регистрация</a
                       >
                     </li>
@@ -132,7 +137,7 @@
             </div>
           </div>
           <div class="header-buttons__unit unit_basket">
-            <button type="button" class="button">
+            <a href="#" class="button">
               <span class="visually-hidden">Корзина покупателя</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +154,7 @@
                 </g>
               </svg>
               <span>Пусто</span>
-            </button>
+            </a>
             <div class="popup popup-basket">
               <table class="basket__table">
                 <tr>
@@ -218,6 +223,7 @@
       </div>
     </header>
     <main class="index-content">
+      <h1 class="visually-hidden">GllacyShop: Главная страница</h1>
       <div class="container">
         <!-- GENERAL-OFFER -->
         <section class="index-content__general-offer">
@@ -239,10 +245,10 @@
                   alt="Второе мороженое 'пломбир с малиновым джемом' из главного предложения"
                 />
               </div>
-              <h1>Крем-брюле и пломбир с малиновым джемом</h1>
-              <button type="submit" class="button--alt">
+              <p>Крем-брюле и пломбир с малиновым джемом</p>
+              <a href="#" class="button--alt">
                 Давайте оба!
-              </button>
+              </a>
             </li>
             <li class="slider-item slide-second">
               <div class="general-offer__ice-cream-wrapper">
@@ -261,11 +267,10 @@
                   alt="Второе мороженое 'пломбир с малиновым джемом' из главного предложения"
                 />
               </div>
-
-              <h1>Шоколадный пломбир и лимонный сорбет</h1>
-              <button type="submit" class="button--alt">
+              <p>Шоколадный пломбир и лимонный сорбет</p>
+              <a href="#" class="button--alt">
                 Давайте оба!
-              </button>
+              </a>
             </li>
             <li class="slider-item slide-third">
               <div class="general-offer__ice-cream-wrapper">
@@ -284,16 +289,21 @@
                   alt="Второе мороженое 'пломбир с малиновым джемом' из главного предложения"
                 />
               </div>
-              <h1>Пломбир с помадкой и клубничный щербет</h1>
-              <button type="submit" class="button--alt">
+              <p>Пломбир с помадкой и клубничный щербет</p>
+              <a href="#" class="button--alt">
                 Давайте оба!
-              </button>
+              </a>
             </li>
           </ul>
           <div class="slider-controls">
-            <button class="dot dot-first current" type="button"></button
-            ><button class="dot dot-second" type="button"></button
-            ><button class="dot dot-third" type="button"></button>
+            <span class="visually-hidden">Кнопки управления слайдером</span>
+            <button class="dot dot-first current" type="button">
+              <span class="visually-hidden">Состояние 1</span></button
+            ><button class="dot dot-second" type="button">
+              <span class="visually-hidden">Состояние 2</span></button
+            ><button class="dot dot-third" type="button">
+              <span class="visually-hidden">Состояние 3</span>
+            </button>
           </div>
         </section>
         <!-- // GENERAL-OFFER -->
@@ -356,9 +366,9 @@
                 >Сливочное с апельсиновым джемом и цитрусовой стружкой</a
               >
             </p>
-            <button class="button--alt" type="button">
-              Быстрый просмотр
-            </button>
+            <div class="products_button-wrapper">
+              <a href="#" class="button--alt">Быстрый просмотр</a>
+            </div>
           </li>
           <li>
             <div class="products__wrapper">
@@ -390,9 +400,9 @@
                 >Сливочно-кофейное с кусочками шоколада</a
               >
             </p>
-            <button class="button--alt" type="button">
-              Быстрый просмотр
-            </button>
+            <div class="products_button-wrapper">
+              <a href="#" class="button--alt">Быстрый просмотр</a>
+            </div>
           </li>
           <li>
             <div class="products__wrapper">
@@ -424,9 +434,9 @@
                 >Сливочно-клубничное с присыпкой из белого шоколада</a
               >
             </p>
-            <button class="button--alt" type="button">
-              Быстрый просмотр
-            </button>
+            <div class="products_button-wrapper">
+              <a href="#" class="button--alt">Быстрый просмотр</a>
+            </div>
           </li>
           <li>
             <div class="products__wrapper">
@@ -458,9 +468,9 @@
                 >Сливочное крем-брюле с карамельной подливкой</a
               >
             </p>
-            <button class="button--alt" type="button">
-              Быстрый просмотр
-            </button>
+            <div class="products_button-wrapper">
+              <a href="#" class="button--alt">Быстрый просмотр</a>
+            </div>
           </li>
         </ul>
       </section>
@@ -555,7 +565,7 @@
                   name="email"
                   placeholder="email@example.com"
                   id="subscription-input"
-                  class="email-input"
+                  class="input email-input"
                   required
                 />
                 <button type="submit" class="button--alt">
@@ -580,14 +590,14 @@
               >8 812 450-25-25</a
             >(с 10 до 20 ежедневно)
           </p>
-          <button class="button--alt">
+          <a href="#" class="button--alt">
             Форма обратной связи
-          </button>
+          </a>
         </div>
       </div>
       <!-- // MAP -->
     </main>
-    <footer>
+    <footer class="footer">
       <div class="footer-social">
         <h2 class="visually-hidden">Раздел контактов в социальных сетях</h2>
         <a href="#" class="footer-social__icon facebook">
@@ -701,7 +711,7 @@
     <div class="feedback-overlay"></div>
     <div class="feedback__popup" id="feedback">
       <h2>Мы обязательно вам ответим!</h2>
-      <button class="button-cross">
+      <button class="button-cross" type="button">
         <img
           src="./img/icons/cross-big.svg"
           width="18"
@@ -715,12 +725,14 @@
           type="text"
           name="firstname"
           id="firstname"
+          class="input"
           placeholder="Имя Фамилия"
         />
         <input
           type="email"
           name="email"
           id="email"
+          class="input"
           placeholder="Ваша почта для ответа?"
         />
         <textarea
