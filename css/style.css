@@ -144,6 +144,8 @@ a {
   display: inline-block;
   border-radius: 20px;
 
+  vertical-align: middle;
+
   font-size: 14px;
   font-weight: 500;
   line-height: 32px;
